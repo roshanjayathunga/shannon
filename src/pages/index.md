@@ -1,5 +1,7 @@
 ---
 templateKey: index-page
+title: Sesquipedalian
+image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Theatre led learning
 mainpitch:
