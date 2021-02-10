@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap');
+
+$primaryColor: #fdbd11;
+$secondaryColor: #f47221;
+$accentColor: #199d95;
+$accentLightColor: #a5dcdd;
+$backgroundColor: #efecee;
+$white: #ffffff;
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+// Common Styles
+.full-width-image{
+    height: 100vh;
+}
+
+.MuiTypography-body1 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #131313;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 600;
+    color: $white;
+    margin: 14px 10px;
+    position: absolute;
+}
+
+.MuiButton-text {
+    padding: 12px 8px;
+}
+
+.main-title{
+    font-size: 72px;
+    font-weight: 600;
+    color: $white;
+
+}

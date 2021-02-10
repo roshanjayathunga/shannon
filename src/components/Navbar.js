@@ -1,98 +1,110 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from 'react';
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Slide from '@material-ui/core/Slide';
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
+const useStyles = makeStyles({
+  navbar:{
+    position: 'fixed',
+    width: '100%',
+    backgroundColor:'#131313',
+    zIndex:'1001',
+    height:'60px'
+  },
+  menuBtn: {
+    float: 'right'
+  },
+  menuIcon: {
+    fontSize: '36px !important',
+    color: '#ffffff'
+  },
+  menuClose:{
+    position: 'absolute',
+    top: '0',
+    right: '0',
+    padding: '10px',
+    cursor: 'pointer',
+    color: '#131313'
+  },
+  fullList: { 
+    width: 'auto',
+    minWidth: '300px',
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign:'center',
+    backgroundColor:'#fdbd11'
+  },
+  listItem:{
+    fontSize: '24px !important'
+  }
+});
+
+export default function Navbar() {
+  const classes = useStyles();
+  const [menu, setState] = React.useState({
+    left: false,
+  });
+
+  const [checked, setChecked] = React.useState(false);
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
     }
-  }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
+    setState({ ...menu, [anchor]: open });
+    setChecked((prev) => !prev);
+  };
 
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
+  const list = (anchor) => (
+    <div
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    > 
+      <List className={classes.fullList} >
+         <span className={`material-icons ${classes.menuIcon} ${classes.menuClose}`}>close</span>
+        {['About Us', 'Our Programmes', 'On stage and Beyond', 'Testimonials', 'Gallery', 'Contact us'].map((text, index) => (
+          <React.Fragment key={text}>
+            <Slide direction="right" in={checked} mountOnEnter unmountOnExit
+              style={{ transformOrigin: '0 0 0' }}
+              {...(checked ? { timeout: 1000 * index / 4 } : {})}
             >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    )
-  }
-}
+              <ListItem button className={classes.listItem}>
+                <ListItemText primary={text}  />
+              </ListItem>
+            </Slide>
+          </React.Fragment>
+        ))}
+      </List>
+    </div>
+  );
 
-export default Navbar
+  return (
+    <div>
+      {['left', 'right', 'top', 'bottom'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Drawer anchor={anchor} open={menu[anchor]} onClose={toggleDrawer(anchor, false)}>
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+      <div className={classes.navbar}>
+         <span className="logo">Sesquipedalian</span>
+         <Button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
+            <span className={`material-icons ${classes.menuIcon}`}>menu</span>
+        </Button>
+      </div>
+     
+    </div>
+  );
+}
