@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+
+import { TweenMax,TimelineLite, Power3, Expo } from "gsap";
+
 
 export const IndexPageTemplate = ({
   image,
@@ -16,6 +19,10 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
+    <div className="overlay">
+      <h1 className="loading-title">Sesquipedalian</h1>
+      <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">Theatre led learning</span>
+  </div>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -37,7 +44,7 @@ export const IndexPageTemplate = ({
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen main-title"
+          className="hero-title"
         >
           {title}
         </h1>
@@ -106,6 +113,7 @@ export const IndexPageTemplate = ({
   </div>
 )
 
+
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
@@ -121,9 +129,44 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
+  let app = useRef(null);
+  let tl = new TimelineLite()
+
+  useEffect(() => {
+    const heroImage = app.querySelector('.full-width-image');
+
+    TweenMax.to(app, 0 ,{css: {visibility:'visible'}});
+
+    TweenMax.to(".overlay h1", 3, {
+      opacity: 0,
+      y: -60,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".overlay span", 2, {
+      delay: .6,
+      opacity: 0,
+      y: -60,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".overlay", 3, {
+      delay: 1,
+      top: "-100%",
+      ease: Expo.easeInOut
+    })
+
+    tl.from(heroImage, 5, {y: -1200, ease: Power3.easeOut},'Start')
+      .from(heroImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .5)
+
+    console.log(app);
+
+  });
+
   return (
     <Layout>
-      <IndexPageTemplate
+      <div className="index-page"  ref={el => app = el}>
+      <IndexPageTemplate 
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -132,6 +175,7 @@ const IndexPage = ({ data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
+      </div>
     </Layout>
   )
 }

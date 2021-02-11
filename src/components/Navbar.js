@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -10,14 +10,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Slide from '@material-ui/core/Slide';
 
+import { TweenMax,TimelineLite, Power3, Expo } from "gsap";
+
 const useStyles = makeStyles({
-  navbar:{
-    position: 'fixed',
-    width: '100%',
-    backgroundColor:'#131313',
-    zIndex:'1001',
-    height:'60px'
-  },
   menuBtn: {
     float: 'right'
   },
@@ -53,6 +48,21 @@ export default function Navbar() {
   const [menu, setState] = React.useState({
     left: false,
   });
+
+  let app = useRef(null);
+  let tl = new TimelineLite()
+
+  useEffect(() => {
+ 
+    TweenMax.to(".navbar", 3, {css:{visibility:'visible'}})
+
+    // tl.from(heroImage, 3, {y: -1200, ease: Power3.easeOut},'Start')
+    // .from(heroImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .5)
+
+    // console.log(app);
+
+  });
+
 
   const [checked, setChecked] = React.useState(false);
 
@@ -98,7 +108,7 @@ export default function Navbar() {
           </Drawer>
         </React.Fragment>
       ))}
-      <div className={classes.navbar}>
+      <div className="navbar" >
          <span className="logo">Sesquipedalian</span>
          <Button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
             <span className={`material-icons ${classes.menuIcon}`}>menu</span>

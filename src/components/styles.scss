@@ -7,6 +7,7 @@ $accentColor: #199d95;
 $accentLightColor: #a5dcdd;
 $backgroundColor: #efecee;
 $white: #ffffff;
+$textColor: #131313;
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -17,11 +18,62 @@ body{
     height: 100vh;
 }
 
+// Loading Screen
+.loading-title{
+    font-size: 100px;
+    letter-spacing: 5px;
+    color: $textColor;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: $primaryColor;
+    top: 0%;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay span {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+
+
+// Landing Page and Navbar
 .MuiTypography-body1 {
     font-size: 1.8rem;
     text-align: center;
     color: #131313;
     font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color:#131313;
+    z-index: 1001;
+    height:60px;
+    visibility: hidden;
+    display: inline-block;
+}
+
+.makeStyles-navbar-1{
+    visibility: hidden;
+}
+
+.index-page{
+    visibility: hidden;
+}
+
+.hero-title{
+    font-size: 72px;
+    color: $white;
 }
 
 .logo {
@@ -40,5 +92,22 @@ body{
     font-size: 72px;
     font-weight: 600;
     color: $white;
+}
 
+// Media Queries
+@media screen and (min-width: 960px) {
+
+}
+
+@media screen and (max-width: 540px) {
+    /* Styles go here */
+    .loading-title{
+        font-size: 36px;
+        letter-spacing: 3px;
+        color: $textColor;
+      }
+    .hero-title{
+        font-size: 36px;
+        color: $white;
+    }
 }

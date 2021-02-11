@@ -49,6 +49,7 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
+        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> */}
       </Helmet>
       <Navbar />
       <div>{children}</div>
