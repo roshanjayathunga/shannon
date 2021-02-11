@@ -152,7 +152,7 @@ const IndexPage = ({ data }) => {
 
     TweenMax.to(".overlay", 3, {
       delay: 1,
-      top: "-100%",
+      top: "-120%",
       ease: Expo.easeInOut
     })
 
