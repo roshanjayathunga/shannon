@@ -43,8 +43,6 @@ body{
     letter-spacing: 3px;
 }
 
-
-
 // Landing Page and Navbar
 .MuiTypography-body1 {
     font-size: 1.8rem;
@@ -72,8 +70,18 @@ body{
 }
 
 .hero-title{
+    padding: 2rem;
     font-size: 72px;
     color: $white;
+    background-color: #a5dcdd21;
+}
+
+.hero-subtitle{
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    background-color: #a5dcdd21;
+    width: 325px;
 }
 
 .logo {
@@ -94,12 +102,35 @@ body{
     color: $white;
 }
 
+.section-intro{
+    min-height: 75vh;
+}
+
+.intro-wrap{
+    background-color: $accentColor;
+    color: $white;
+    padding: 5rem;
+    position: absolute;
+    right: 0;
+    margin: 4rem 0rem 4rem 8rem;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-description{
+    line-height: 32px;
+}
+
 // Media Queries
 @media screen and (min-width: 960px) {
 
 }
 
 @media screen and (max-width: 540px) {
+    // Common Style
+
     /* Styles go here */
     .loading-title{
         font-size: 36px;
@@ -110,4 +141,15 @@ body{
         font-size: 36px;
         color: $white;
     }
+
+    .section-intro {
+        min-height: 80vh;
+    }
+    .intro-wrap {
+        background-color: $accentColor;
+        padding: 1rem;
+        margin: 0 0 0 1rem;
+        min-height: 80vh;
+    }
+    
 }

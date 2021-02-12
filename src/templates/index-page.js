@@ -6,7 +6,11 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
-import { TweenMax,TimelineLite, Power3, Expo } from "gsap";
+import Grid from '@material-ui/core/Grid';
+
+import { gsap,TweenMax,TimelineLite, Power3, Expo } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 
 export const IndexPageTemplate = ({
@@ -16,6 +20,7 @@ export const IndexPageTemplate = ({
   subheading,
   mainpitch,
   description,
+  introImage,
   intro,
 }) => (
   <div>
@@ -49,43 +54,45 @@ export const IndexPageTemplate = ({
           {title}
         </h1>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
+          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen hero-subtitle"
+           
         >
           {subheading}
         </h3>
       </div>
     </div>
+    
+    <section className="section section--gradient section-intro">
+      <Grid   container
+              direction="row"
+              justify="center"
+              alignItems="center"
+            >
+         <Grid item  xs={12} sm={2}>
+              {/* <div className="intro-img-wrap">
+                <img src={
+                      !!introImage.childImageSharp ? introImage.childImageSharp.fluid.src : introImage
+                    } />
+              </div> */}                
+        </Grid>
+        <Grid item xs={12} sm={8} >
+          <div className="intro-wrap">
+              <h3 className="has-text-weight-semibold is-size-2 is-size-5-mobile is-size-2-tablet is-size-1-widescreen intro-heading">
+                  {heading}
+              </h3>
+              <p className="intro-description">{description}</p>
+          </div>
+        </Grid>
+       
+      </Grid>
+    </section>
+    
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
+              <div className="content">           
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
@@ -121,6 +128,7 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
+  introImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -157,9 +165,20 @@ const IndexPage = ({ data }) => {
     })
 
     tl.from(heroImage, 5, {y: -1200, ease: Power3.easeOut},'Start')
-      .from(heroImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .5)
-
-    console.log(app);
+      .from(heroImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .5);
+    
+    gsap.from('.intro-wrap',{
+        duration: 2,
+        y: 0,
+        opacity: '0',
+        ease: 'ease-in',
+        scrollTrigger: {
+          trigger: '.intro-heading',
+          start: 'top 80%',
+          end:'bottom 60%',
+          toggleActions: 'restart complete reverse reset'
+        }
+    })
 
   });
 
@@ -173,6 +192,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
+        introImage={frontmatter.introImage}
         intro={frontmatter.intro}
       />
       </div>
@@ -209,6 +229,13 @@ export const pageQuery = graphql`
           description
         }
         description
+        introImage {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         intro {
           blurbs {
             image {
