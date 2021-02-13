@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Sesquipedalian
-image: /img/home-cover.png
+image: /img/banner1.jpg
 heading: We are Sesquipedalian
 subheading: Theatre led learning
 mainpitch:
