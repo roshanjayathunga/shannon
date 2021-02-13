@@ -9,13 +9,30 @@ $backgroundColor: #efecee;
 $white: #ffffff;
 $textColor: #131313;
 
+
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 // Common Styles
 .full-width-image{
     height: 100vh;
+}
+
+// Primary Button
+.btn-primary{
+    min-width: 200px;
+    padding: 0.8rem;
+    margin-top: 1.2rem;
+    background-color: $primaryColor;
+    color: $white;
+    font-size: 14px;
+    border-radius: 0;
+    letter-spacing: 2px;
+}
+
+.btn-primary:hover{
+    background-color: $secondaryColor;
 }
 
 // Loading Screen
@@ -48,7 +65,6 @@ body{
     font-size: 1.8rem;
     text-align: center;
     color: #131313;
-    font-family: 'Poppins', sans-serif;
 }
 
 .navbar{
@@ -70,7 +86,7 @@ body{
 }
 
 .hero-title{
-    padding: 2rem;
+    padding: 1.5rem;
     font-size: 82px;
     color: $primaryColor;
     font-weight: 600;
@@ -102,16 +118,9 @@ body{
 }
 
 .section-intro{
-    min-height: 75vh;
-}
-
-.intro-wrap{
     background-color: $accentColor;
     color: $white;
     padding: 5rem;
-    position: absolute;
-    right: 0;
-    margin: 4rem 0rem 4rem 8rem;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -121,6 +130,33 @@ body{
 .intro-description{
     line-height: 32px;
 }
+
+.section-program{
+    min-height: 50vh;
+    padding: 5rem;
+}
+
+
+// Contact Page
+.section-contact{
+    min-height: 100vh;
+}
+.contact-wrap{
+    padding: 5rem 3rem;
+}
+
+// footer
+
+footer{
+    background-color: $accentColor !important;
+}
+
+.footer-title{
+    font-size: 48px;
+    font-weight: 600;
+    color: $primaryColor;
+}
+
 
 // Media Queries
 @media screen and (min-width: 960px) {
@@ -133,7 +169,7 @@ body{
     /* Styles go here */
     .loading-title{
         font-size: 36px;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         color: $textColor;
       }
 
@@ -141,7 +177,7 @@ body{
         padding: 1rem;
         font-size: 36px;
         font-weight: 600;
-        letter-spacing: 4px;
+        letter-spacing: 3px;
     }
     
     .hero-subtitle{ 
@@ -149,14 +185,10 @@ body{
         letter-spacing: 5px;
     }
 
-    .section-intro {
-        min-height: 80vh;
-    }
-    .intro-wrap {
-        background-color: $accentColor;
+    .section-intro, .section-program {
         padding: 1rem;
-        margin: 0 0 0 1rem;
         min-height: 80vh;
     }
+    
     
 }

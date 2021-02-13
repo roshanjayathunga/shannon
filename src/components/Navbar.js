@@ -11,6 +11,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Slide from '@material-ui/core/Slide';
 
 import { TweenMax,TimelineLite, Power3, Expo } from "gsap";
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles({
   menuBtn: {
@@ -31,6 +32,7 @@ const useStyles = makeStyles({
   fullList: { 
     width: 'auto',
     minWidth: '300px',
+    width: '40vW',
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
@@ -109,7 +111,7 @@ export default function Navbar() {
         </React.Fragment>
       ))}
       <div className="navbar" >
-         <span className="logo">Sesquipedalian</span>
+         <Link to="/"><span className="logo">Sesquipedalian</span></Link>
          <Button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
             <span className={`material-icons ${classes.menuIcon}`}>menu</span>
         </Button>
