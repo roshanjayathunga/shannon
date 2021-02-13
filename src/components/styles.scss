@@ -71,17 +71,16 @@ body{
 
 .hero-title{
     padding: 2rem;
-    font-size: 72px;
-    color: $white;
-    background-color: #a5dcdd21;
+    font-size: 82px;
+    color: $primaryColor;
+    font-weight: 600;
+    letter-spacing: 8px;
 }
 
-.hero-subtitle{
-    margin-top: 1rem;
-    padding: 1rem 2rem;
+.hero-subtitle{ 
     color: #ffffff;
-    background-color: #a5dcdd21;
-    width: 325px;
+    font-weight: 200;
+    letter-spacing: 8px;
 }
 
 .logo {
@@ -137,9 +136,17 @@ body{
         letter-spacing: 3px;
         color: $textColor;
       }
+
     .hero-title{
+        padding: 1rem;
         font-size: 36px;
-        color: $white;
+        font-weight: 600;
+        letter-spacing: 4px;
+    }
+    
+    .hero-subtitle{ 
+        font-weight: 200;
+        letter-spacing: 5px;
     }
 
     .section-intro {

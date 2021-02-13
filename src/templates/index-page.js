@@ -36,6 +36,7 @@ export const IndexPageTemplate = ({
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
+        boxShadow: 'inset 0 0 0 2000px #199d9552'
       }}
     >
       <div
@@ -43,8 +44,8 @@ export const IndexPageTemplate = ({
           display: 'flex',
           height: '150px',
           lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
+          justifyContent: 'center',
+          alignItems: 'center',
           flexDirection: 'column',
         }}
       >
@@ -54,7 +55,7 @@ export const IndexPageTemplate = ({
           {title}
         </h1>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen hero-subtitle"
+          className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen hero-subtitle"
            
         >
           {subheading}
