@@ -1,23 +1,17 @@
 ---
 templateKey: index-page
 title: Sesquipedalian
-image: /img/home-jumbotron.jpg
+image: /img/home-cover.png
 heading: We are Sesquipedalian
 subheading: Theatre led learning
 mainpitch:
   title: Dummy Content
-  description: >
+  description: |
     Dummy Content
-description: SESQUIPEDALIAN Theatre led learning (STLL)provides a comprehensive language 
-  and personality enrichment program for students aged 5-16. At STLL students are
-  presented with a challenging yet transforming curriculum presented through theatre led 
-  teaching techniques and are allowed the opportunity to maximize their potential while 
-  fostering their creativity and talents.
-introImage: /img/intro.png
 intro:
   blurbs:
     - image: /img/intro.png
-      text: >
+      text: |
         Dummy Content
   heading: What we offer
   description: >
@@ -25,6 +19,13 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+introImage: /img/intro.png
+description: SESQUIPEDALIAN Theatre led learning (STLL)provides a comprehensive
+  language and personality enrichment program for students aged 5-16. At STLL
+  students are presented with a challenging yet transforming curriculum
+  presented through theatre led teaching techniques and are allowed the
+  opportunity to maximize their potential while fostering their creativity and
+  talents.
 main:
   heading: Great coffee with no compromises
   description: >
