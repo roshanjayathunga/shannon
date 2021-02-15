@@ -136,6 +136,18 @@ body{
     padding: 5rem;
 }
 
+.program-card .sub-title{
+    background-color: #199d95;
+    padding: 4px 8px;
+    color: white;
+    width: auto;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.section-insta{
+    padding: 2.5rem 0rem;
+}
 
 // Contact Page
 .section-contact{
@@ -143,6 +155,11 @@ body{
 }
 .contact-wrap{
     padding: 5rem 3rem;
+}
+
+// Insta Feed 
+.insta-wrap .MuiPaper-rounded{
+    border-radius: 0 !important;
 }
 
 // footer

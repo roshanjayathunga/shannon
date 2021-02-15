@@ -12,6 +12,8 @@ import Button from '@material-ui/core/Button';
 import { gsap, TweenMax, TimelineLite, Power3, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Program from '../components/Program'
+import InstaFeed from '../components/InstaFeed'
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -24,6 +26,7 @@ export const IndexPageTemplate = ({
   description,
   introImage,
   intro,
+  totalCount
 }) => (
   <div>
     <div className="overlay">
@@ -57,13 +60,13 @@ export const IndexPageTemplate = ({
           className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen hero-subtitle" >
           {subheading}
         </h3>
-       
-          <Link to="/contact">
-            <Button variant="contained" color="primary" className="btn-primary">
-              Join Now
+
+        <Link to="/contact">
+          <Button variant="contained" color="primary" className="btn-primary">
+            Join Now
               </Button>
-          </Link>
-        
+        </Link>
+
       </div>
     </div>
 
@@ -74,57 +77,65 @@ export const IndexPageTemplate = ({
         alignItems="center"
       >
         <Grid item xs={12} sm={12} >
-            <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen intro-heading">
-              {heading}
-            </h3>
-            <p className="intro-description">{description}</p>
+          <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen intro-heading">
+            {heading}
+          </h3>
+          <p className="intro-description">{description}</p>
         </Grid>
       </Grid>
     </section>
 
     <section className="section-program">
-        <Grid container spacing={3}
-        >
-          <Grid item xs={12} sm={12} >
-            <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen">
-              Our Programmes
+      <Grid container spacing={3}
+      >
+        <Grid item xs={12} sm={12} >
+          <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen">
+            Our Programmes
             </h3>
-          </Grid>
-          <Grid item xs={12} sm={4}>
+        </Grid>
+        {/* <Grid item xs={12} sm={4}>
               <Program imgSrc={"https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
                        title={"Launch to Ascend"}
                        info={"The ‘Launch to Ascend’ language and personality enrichment program provides learners with high-interest academic ..."}
               />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-              <Program imgSrc={"https://images.pexels.com/photos/1815257/pexels-photo-1815257.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"}
-                       title={"Launch (Ages 5-7)"}
-                       info={"Our exploration based approach to learning ensures an exceptional start for your child. Students are introduced ..."}
-              />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-              <Program imgSrc={"https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
-                       title={"Ignite (Ages 8-10)"}
-                       info={"Students will be introduced to thematic content and literature from a range of genres enhancing vocabulary development, ..."}
-              />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-              <Program imgSrc={"https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
-                       title={"Propel (Ages 11-13)"}
-                       info={"Students will develop word awareness, learn morphological elements that are most frequent and Independent word learning strategies ..."}
-              />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-              <Program imgSrc={"https://images.pexels.com/photos/4834822/pexels-photo-4834822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
-                       title={"Ascend (Ages 14 & above)"}
-                       info={"At the end of this course students will use multisyllabic words or phrase choices based on a highly developed vocabulary..."}
-              />
-          </Grid>
-          
-
+          </Grid> */}
+        <Grid item xs={12} sm={3}>
+          <Program imgSrc={"https://images.pexels.com/photos/1815257/pexels-photo-1815257.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"}
+            title={"Launch"}
+            subtitle={"Ages 5-7"}
+            info={""}
+          />
         </Grid>
+        <Grid item xs={12} sm={3}>
+          <Program imgSrc={"https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
+            title={"Ignite"}
+            subtitle={"Ages 8-10"}
+            info={""}
+          />
+        </Grid>
+        <Grid item xs={12} sm={3}>
+          <Program imgSrc={"https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
+            title={"Propel"}
+            subtitle={"Ages 11-13"}
+            info={""}
+          />
+        </Grid>
+        <Grid item xs={12} sm={3}>
+          <Program imgSrc={"https://images.pexels.com/photos/4834822/pexels-photo-4834822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
+            title={"Ascend"}
+            subtitle={"Ages 14 and above"}
+            info={""}
+          />
+        </Grid>
+
+
+      </Grid>
     </section>
 
+    <section className="section-insta">
+      <InstaFeed />
+    </section>
+    
     {/* <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -170,10 +181,12 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  totalCount: PropTypes.number
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const { totalCount } = data.allInstaNode
 
   let app = useRef(null);
   let tl = new TimelineLite()
@@ -254,6 +267,7 @@ const IndexPage = ({ data }) => {
           description={frontmatter.description}
           introImage={frontmatter.introImage}
           intro={frontmatter.intro}
+          totalCount={totalCount}
         />
       </div>
     </Layout>
@@ -265,6 +279,7 @@ IndexPage.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
+    allInstaNode: PropTypes.object,
   }),
 }
 
@@ -309,6 +324,14 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+      }
+    }
+    allInstaNode {
+      totalCount
+      nodes {
+        thumbnails {
+          src
         }
       }
     }

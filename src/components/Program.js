@@ -21,7 +21,7 @@ const Program = (props) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} className="program-card">
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -29,19 +29,25 @@ const Program = (props) => {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.info}
-          </Typography>
+          <div className="info-wrap">
+            <Typography gutterBottom variant="h5" component="h6">
+                {props.title}
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary" component="p" className="sub-title">
+                {props.subtitle}
+            </Typography>
+          </div>
+          <Button size="small" color="primary">
+          Learn More
+        </Button>
+          
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small" color="primary">
           Learn More
         </Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }
