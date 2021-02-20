@@ -23,7 +23,6 @@ body{
 .btn-primary{
     min-width: 200px;
     padding: 0.8rem;
-    margin-top: 1.2rem;
     background-color: $primaryColor;
     color: $white;
     font-size: 14px;
@@ -31,8 +30,27 @@ body{
     letter-spacing: 2px;
 }
 
+// Accent Button
+.btn-accent{
+    min-width: 200px;
+    padding: 0.8rem;
+    background-color: $accentColor;
+    color: $white;
+    font-size: 14px;
+    border-radius: 0;
+    letter-spacing: 2px;
+}
 .btn-primary:hover{
     background-color: $secondaryColor;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
 }
 
 // Loading Screen
@@ -70,7 +88,7 @@ body{
 .navbar{
     position: fixed;
     width: 100%;
-    background-color:#131313;
+    background-color:$accentColor;
     z-index: 1001;
     height:60px;
     visibility: hidden;
@@ -79,6 +97,16 @@ body{
 
 .makeStyles-navbar-1{
     visibility: hidden;
+}
+
+.navbar-social-wrap{
+    display: flex;
+    justify-content: center;
+}
+.navbar-collapse .social-icon{
+    color: $textColor;
+    font-size: 24px;
+    padding: 0 15px;
 }
 
 .index-page{
@@ -94,9 +122,10 @@ body{
 }
 
 .hero-subtitle{ 
-    color: #ffffff;
+    color: $white;
     font-weight: 200;
     letter-spacing: 8px;
+    margin-bottom: 1.2rem;
 }
 
 .logo {
@@ -136,13 +165,35 @@ body{
     padding: 5rem;
 }
 
+.program-card .info-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.program-card .MuiTypography-gutterBottom{
+    margin-bottom: 0;
+}
+
+.program-card .MuiButton-textPrimary {
+    color: $primaryColor;
+}
+
+.program-card .MuiButton-text {
+    padding: 12px 0px;
+}
+
+.program-card .MuiButton-textPrimary {
+    color: $primaryColor;
+}
+
 .program-card .sub-title{
-    background-color: #199d95;
+    background-color: $accentColor;
     padding: 4px 8px;
     color: white;
     width: auto;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 13px;
+    border-radius: 20px;
 }
 
 .section-insta{
@@ -164,16 +215,40 @@ body{
 
 // footer
 
-footer{
+.footer-section{
     background-color: $accentColor !important;
+    min-height: 50vh;
+    padding: 5rem;
 }
 
 .footer-title{
-    font-size: 48px;
     font-weight: 600;
-    color: $primaryColor;
+    color: $white;
+    font-size: 36px;
 }
 
+.footer-section .menu-list a {
+    border-radius: 2px;
+    color: whitesmoke;
+    display: block;
+    padding: 0.4rem 0rem;
+}
+
+.footer-section .menu-list a:hover {
+    color: $primaryColor !important;
+    background-color: transparent;
+}
+
+.footer-section .menu-list a:focus {
+    color: $primaryColor !important;
+    background-color: transparent;
+}
+
+.footer-section .social-icon{
+    color: $white;
+    font-size: 24px;
+    margin-right: 24px;
+}
 
 // Media Queries
 @media screen and (min-width: 960px) {
@@ -207,5 +282,7 @@ footer{
         min-height: 80vh;
     }
     
-    
+    .footer-title{
+        font-size: 24px;
+    }
 }

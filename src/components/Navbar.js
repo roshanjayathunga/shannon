@@ -14,6 +14,10 @@ import { TweenMax,TimelineLite, Power3, Expo } from "gsap";
 import { Link } from 'gatsby';
 
 const useStyles = makeStyles({
+  root:{
+    paddingTop: '4px',
+    paddingBottom: '4px'
+  },
   menuBtn: {
     float: 'right'
   },
@@ -32,7 +36,7 @@ const useStyles = makeStyles({
   fullList: { 
     width: 'auto',
     minWidth: '300px',
-    width: '40vW',
+    width: '30vW',
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
@@ -41,7 +45,9 @@ const useStyles = makeStyles({
     backgroundColor:'#fdbd11'
   },
   listItem:{
-    fontSize: '24px !important'
+    fontSize: '24px !important',
+    paddingTop: '4px !important',
+    paddingBottom: '4px !important',
   }
 });
 
@@ -65,7 +71,6 @@ export default function Navbar() {
 
   });
 
-
   const [checked, setChecked] = React.useState(false);
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -82,9 +87,10 @@ export default function Navbar() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      className="navbar-collapse"
     > 
       <List className={classes.fullList} >
-         <span className={`material-icons ${classes.menuIcon} ${classes.menuClose}`}>close</span>
+         <i className={`fas fa-times ${classes.menuIcon} ${classes.menuClose}`}></i>
         {['About Us', 'Our Programmes', 'On stage and Beyond', 'Testimonials', 'Gallery', 'Contact us'].map((text, index) => (
           <React.Fragment key={text}>
             <Slide direction="right" in={checked} mountOnEnter unmountOnExit
@@ -97,6 +103,41 @@ export default function Navbar() {
             </Slide>
           </React.Fragment>
         ))}
+
+        <Slide direction="right" in={checked} mountOnEnter unmountOnExit
+              style={{ transformOrigin: '0 0 0' }}
+              {...(checked ? { timeout: 2000 } : {})}
+        >
+         <ListItem className="flex justify-center">
+          <Button variant="contained" color="primary" className="btn-accent">
+            Join Now
+          </Button>
+        </ListItem>         
+        </Slide>
+
+        
+        <Slide direction="right" in={checked} mountOnEnter unmountOnExit
+          style={{ transformOrigin: '0 0 0' }}
+          {...(checked ? { timeout: 2300 } : {})}
+        > 
+          <ListItem className="navbar-social-wrap">
+            <Link to="https://facebook.com">
+              <span  className="social-icon">
+                 <i className="fab fa-facebook-f"></i>
+              </span>
+            </Link>
+            <Link to="https://instagram.com">
+              <span  className="social-icon">
+                 <i className="fab fa-instagram"></i>
+              </span>
+            </Link>
+            <Link to="https://twitter.com">
+              <span  className="social-icon">
+                 <i class="fab fa-twitter"></i>
+              </span>
+            </Link>
+          </ListItem>
+        </Slide>
       </List>
     </div>
   );
@@ -113,10 +154,9 @@ export default function Navbar() {
       <div className="navbar" >
          <Link to="/"><span className="logo">Sesquipedalian</span></Link>
          <Button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
-            <span className={`material-icons ${classes.menuIcon}`}>menu</span>
+            <i className={`fas fa-bars ${classes.menuIcon}`}></i>
         </Button>
       </div>
-     
     </div>
   );
 }
