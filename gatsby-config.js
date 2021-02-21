@@ -72,7 +72,7 @@ module.exports = {
       options: {
         sdk: {
           appId: '240407464397716',
-          version: '2.8'
+          version: '9.0'
         },
         chat: {
           pageId: '1708301385918286',
