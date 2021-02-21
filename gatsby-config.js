@@ -68,6 +68,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-facebook-customer-chat`,
+      options: {
+        sdk: {
+          appId: '240407464397716',
+
+        },
+        chat: {
+          pageId: '1708301385918286',
+          loggedInGreeting: 'Hi! How can I help you?',
+          loggedOutGreeting: 'Hi! How can I help you?',
+        }
+      },
+    },
+    {
       resolve: 'gatsby-source-instagram',
       options: {
         username: '12037028477',

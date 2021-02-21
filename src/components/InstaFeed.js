@@ -44,10 +44,6 @@ class InstaFeed extends React.Component {
           })}
 
         </Grid>
-
-        <p>
-          {totalCount}
-        </p>
       </div>
 
     )
