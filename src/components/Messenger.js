@@ -4,8 +4,10 @@ class Messenger extends React.Component {
   componentDidMount() {
     window.fbAsyncInit = function() {
       FB.init({ //eslint-disable-line
+        appId: 240407464397716,
+        autoLogAppEvents: true,
         xfbml: true,
-        version: 'v6.0'
+        version: 'v3.3'
       });
     };
 
