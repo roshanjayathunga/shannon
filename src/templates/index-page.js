@@ -13,6 +13,7 @@ import { gsap, TweenMax, TimelineLite, Power3, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Program from '../components/Program'
 import InstaFeed from '../components/InstaFeed'
+import Messenger from '../components/Messenger'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -131,7 +132,10 @@ export const IndexPageTemplate = ({
 
       </Grid>
     </section>
-
+    <React.Fragment>
+      <Messenger />
+    </React.Fragment>
+       
     <section className="section-insta">
       <InstaFeed />
     </section>
