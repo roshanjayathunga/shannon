@@ -132,10 +132,7 @@ export const IndexPageTemplate = ({
 
       </Grid>
     </section>
-    <React.Fragment>
-      <Messenger />
-    </React.Fragment>
-       
+      
     <section className="section-insta">
       <InstaFeed />
     </section>

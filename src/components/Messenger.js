@@ -7,7 +7,7 @@ class Messenger extends React.Component {
         appId: 240407464397716,
         autoLogAppEvents: true,
         xfbml: true,
-        version: 'v3.3'
+        version: 'v9.0'
       });
     };
 
