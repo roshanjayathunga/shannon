@@ -12,7 +12,7 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer-section">
-       <p>ssdas</p>
+       <p>ssdask</p>
       </footer>
     )
   }
