@@ -100,28 +100,28 @@ export const IndexPageTemplate = ({
                        info={"The ‘Launch to Ascend’ language and personality enrichment program provides learners with high-interest academic ..."}
               />
           </Grid> */}
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={12} md={3}>
           <Program imgSrc={"https://images.pexels.com/photos/1815257/pexels-photo-1815257.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"}
             title={"Launch"}
             subtitle={"Ages 5-7"}
             info={""}
           />
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={12} md={3}>
           <Program imgSrc={"https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
             title={"Ignite"}
             subtitle={"Ages 8-10"}
             info={""}
           />
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={12} md={3}>
           <Program imgSrc={"https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
             title={"Propel"}
             subtitle={"Ages 11-13"}
             info={""}
           />
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={12} md={3}>
           <Program imgSrc={"https://images.pexels.com/photos/4834822/pexels-photo-4834822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
             title={"Ascend"}
             subtitle={"Ages 14 and above"}
