@@ -62,13 +62,13 @@ const Footer = class extends React.Component {
 
           <Grid item xs={12} md={4} >
             <a title="facebook" href="https://facebook.com" className="social-icon">
-              <i class="fab fa-facebook-f"></i>
+              <i className="fab fa-facebook-f"></i>
             </a>
             <a title="facebook" href="https://facebook.com" className="social-icon">
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
             <a title="facebook" href="https://facebook.com" className="social-icon">
-              <i class="fab fa-twitter"></i>
+              <i className="fab fa-twitter"></i>
             </a>
           </Grid>
 
