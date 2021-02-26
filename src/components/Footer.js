@@ -11,7 +11,7 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer-section">
+      <section className="footer-section">
         <Grid container
           direction="row"
           justify="center"
@@ -27,7 +27,7 @@ const Footer = class extends React.Component {
 
         <Grid container>
           <Grid item xs={12} md={4} >
-            {/* <ul className="menu-list">
+            <ul className="menu-list">
               <li>
                 <Link to="/" className="navbar-item">
                   Home
@@ -58,7 +58,7 @@ const Footer = class extends React.Component {
                   Contact Us
                 </Link>
               </li>
-            </ul> */}
+            </ul>
           </Grid>
 
           <Grid item xs={12} md={4} >
@@ -80,7 +80,7 @@ const Footer = class extends React.Component {
           </Grid>
 
         </Grid>
-      </footer>
+      </section>
     )
   }
 }

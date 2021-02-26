@@ -182,12 +182,10 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-  totalCount: PropTypes.number
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const { totalCount } = data.allInstaNode
 
   let app = useRef(null);
   let tl = new TimelineLite()
@@ -268,7 +266,6 @@ const IndexPage = ({ data }) => {
           description={frontmatter.description}
           introImage={frontmatter.introImage}
           intro={frontmatter.intro}
-          totalCount={totalCount}
         />
       </div>
     </Layout>
@@ -280,7 +277,6 @@ IndexPage.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
-    allInstaNode: PropTypes.object,
   }),
 }
 
@@ -325,14 +321,6 @@ export const pageQuery = graphql`
           }
           heading
           description
-        }
-      }
-    }
-    allInstaNode {
-      totalCount
-      nodes {
-        thumbnails {
-          src
         }
       }
     }
