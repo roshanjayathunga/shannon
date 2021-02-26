@@ -78,9 +78,9 @@ export const IndexPageTemplate = ({
         alignItems="center"
       >
         <Grid item xs={12} sm={12} >
-          <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen intro-heading">
+          {/* <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen intro-heading">
             {heading}
-          </h3>
+          </h3> */}
           <p className="intro-description">{description}</p>
         </Grid>
       </Grid>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
+import FooterSection from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
 import './styles.scss'
@@ -56,7 +56,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <div><Messenger /></div>
       <div>{children}</div>
-      <Footer />
+      <FooterSection />
     </div>
   )
 }

@@ -8,7 +8,7 @@ import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
 
-const Footer = class extends React.Component {
+const FooterSection = class extends React.Component {
   render() {
     return (
       <section className="footer-section">
@@ -21,7 +21,6 @@ const Footer = class extends React.Component {
             <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen intro-heading">
               <span className="footer-title">Sesquipedalian</span>
             </h3>
-            <p>dop</p>
           </Grid>
         </Grid>
 
@@ -85,4 +84,4 @@ const Footer = class extends React.Component {
   }
 }
 
-export default Footer
+export default FooterSection
