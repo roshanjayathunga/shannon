@@ -136,6 +136,8 @@ export const IndexPageTemplate = ({
     <section className="section-insta">
       <InstaFeed />
     </section>
+
+    <Messenger />
     
     {/* <section className="section section--gradient">
       <div className="container">
