@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Grid from '@material-ui/core/Grid';
 import logo from '../img/logo.png'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
@@ -12,7 +11,8 @@ const FooterSection = class extends React.Component {
   render() {
     return (
       <section className="footer-section">
-        <Grid container
+        <p>fffff</p>
+        {/* <Grid container
           direction="row"
           justify="center"
           alignItems="center"
@@ -78,7 +78,7 @@ const FooterSection = class extends React.Component {
             </Grid>
           </Grid>
 
-        </Grid>
+        </Grid> */}
       </section>
     )
   }
