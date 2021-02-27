@@ -19,11 +19,14 @@ const useStyles = makeStyles({
     paddingBottom: '4px'
   },
   menuBtn: {
-    float: 'right'
+    float: 'right',
+    backgroundColor: 'transparent',
+    border: 'none',
+    margin: '10px'
   },
   menuIcon: {
     fontSize: '36px !important',
-    color: '#ffffff'
+    color: '#ffffff',
   },
   menuClose:{
     position: 'absolute',
@@ -109,9 +112,9 @@ export default function Navbar() {
               {...(checked ? { timeout: 2000 } : {})}
         >
          <ListItem className="flex justify-center">
-          <div variant="contained" color="primary" className="btn-accent">
+          <button variant="contained" color="primary" className="btn btn-accent">
             Join Now
-          </div>
+          </button>
         </ListItem>         
         </Slide>
 
@@ -153,9 +156,9 @@ export default function Navbar() {
       ))}
       <div className="navbar" >
          <Link to="/"><span className="logo">Sesquipedalian</span></Link>
-         <div onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
+         <button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
             <i className={`fas fa-bars ${classes.menuIcon}`}></i>
-        </div>
+        </button>
       </div>
     </div>
   );

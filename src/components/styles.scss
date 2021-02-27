@@ -19,6 +19,32 @@ body{
     height: 100vh;
 }
 
+button{
+    font-family: 'Poppins', sans-serif !important;
+    cursor: pointer;
+}
+
+button:focus{
+    border: none;
+    outline: none;
+}
+
+.btn{
+    color: rgba(0, 0, 0, 0.87);
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: none;
+}
+
 // Primary Button
 .btn-primary{
     min-width: 200px;

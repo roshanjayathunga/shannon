@@ -63,9 +63,9 @@ export const IndexPageTemplate = ({
         </h3>
 
         <Link to="/contact">
-          <div variant="contained" color="primary" className="btn-primary">
+          <button variant="contained" color="primary" className="btn btn-primary">
             Join Now
-              </div>
+          </button>
         </Link>
 
       </div>
