@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Grid from '@material-ui/core/Grid';
-import location from '../img/location.png'
+import location from '../img/map.png'
 
 import logo from '../img/logo.png'
 import facebook from '../img/social/facebook.svg'
