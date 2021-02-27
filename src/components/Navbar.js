@@ -94,15 +94,16 @@ export default function Navbar() {
     > 
       <List className={classes.fullList} >
          <i className={`fas fa-times ${classes.menuIcon} ${classes.menuClose}`}></i>
-        {['About Us', 'Our Programmes', 'On stage and Beyond', 'Testimonials', 'Gallery', 'Contact us'].map((text, index) => (
-          <React.Fragment key={text}>
+         {[{title:'About Us',path:'/about'}, {title:'Our Programmes',path:'/programmes'}, {title:'On stage and Beyond',path:'/onstagebeyond'}, {title:'Testimonials',path:'/testimonials'},{title:'Gallery',path:'/gallery'}, {title:'Contact Us',path:'/contact'}].map((item, index) => (
+          <React.Fragment key={item.title}>
             <Slide direction="right" in={checked} mountOnEnter unmountOnExit
               style={{ transformOrigin: '0 0 0' }}
               {...(checked ? { timeout: 1000 * index / 4 } : {})}
-            >
+            ><Link to={item.path}>
               <ListItem button className={classes.listItem}>
-                <ListItemText primary={text}  />
+                <ListItemText primary={item.title}  />
               </ListItem>
+              </Link>
             </Slide>
           </React.Fragment>
         ))}

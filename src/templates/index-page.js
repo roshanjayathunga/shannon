@@ -63,7 +63,7 @@ export const IndexPageTemplate = ({
         </h3>
 
         <Link to="/contact">
-          <button variant="contained" color="primary" className="btn btn-primary">
+          <button variant="contained" color="primary" className="btn btn-primary btm-sm-full-width">
             Join Now
           </button>
         </Link>
@@ -87,19 +87,26 @@ export const IndexPageTemplate = ({
     </section>
 
     <section className="section-program">
-      <Grid container spacing={3}
+      <Grid container 
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={3}
+
       >
-        <Grid item xs={12} sm={12} >
+        <Grid item xs={12} sm={12} md={9}>
           <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen">
             Our Programmes
             </h3>
         </Grid>
-        {/* <Grid item xs={12} sm={4}>
-              <Program imgSrc={"https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
-                       title={"Launch to Ascend"}
-                       info={"The ‘Launch to Ascend’ language and personality enrichment program provides learners with high-interest academic ..."}
-              />
-          </Grid> */}
+        <Grid item xs={12} sm={12} md={3}>
+          <Link to="/contact">
+            <button variant="contained" color="primary" className="btn btn-primary float-right btm-sm-full-width">
+              Join Demo
+            </button>
+          </Link>
+        </Grid>
+
         <Grid item xs={12} sm={12} md={3}>
           <Program imgSrc={"https://images.pexels.com/photos/1815257/pexels-photo-1815257.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"}
             title={"Launch"}

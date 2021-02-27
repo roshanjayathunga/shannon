@@ -19,6 +19,10 @@ body{
     height: 100vh;
 }
 
+.content-area{
+    padding: 3rem 5rem;
+}
+
 button{
     font-family: 'Poppins', sans-serif !important;
     cursor: pointer;
@@ -77,6 +81,14 @@ button:focus{
 }
 .align-items-center{
     align-items: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.list-item-icon{
+    color: $textColor;
 }
 
 // Loading Screen
@@ -175,15 +187,17 @@ button:focus{
 .section-intro{
     background-color: $accentColor;
     color: $white;
-    padding: 5rem;
-    min-height: 50vh;
+    padding: 3rem 5rem;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .intro-description{
-    line-height: 32px;
+    font-size: 21px;
+    line-height: 40px;
+    font-weight: 300;
 }
 
 .section-program{
@@ -226,6 +240,55 @@ button:focus{
     padding: 2.5rem 0rem;
 }
 
+// About Page
+.section-about{
+    background-color: $white;
+    color: $textColor;
+    min-height: 100vh;
+}
+
+.section-about p{
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.about-wrap{
+    padding: 5rem;
+    min-height: 100vh;
+}
+
+.about-mission{
+    padding: 4rem 5rem;
+    background-color: $primaryColor;
+    color: $textColor;
+}
+
+.about-values{
+    padding: 4rem 5rem;
+    background-color: $primaryColor;
+    color: $textColor;
+}
+
+.section-about .why-choose-list li{
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.section-about .why-choose-list span{
+
+    margin-left: 8px;
+}
+
+.section-about .why-choose-list li ul li{
+    margin-left: 60px;
+}
+
+.about-methodology{
+    padding: 4rem 5rem;
+    background-color: $accentColor;
+    color: $white;
+}
+
 // Contact Page
 .section-contact{
     min-height: 100vh;
@@ -240,11 +303,11 @@ button:focus{
 }
 
 // footer
-
-.footer-section{
+.section-footer{
     background-color: $accentColor !important;
-    min-height: 50vh;
-    padding: 5rem;
+    min-height: 45vh;
+    padding: 3rem 5rem;
+    color: $white;
 }
 
 .footer-title{
@@ -253,28 +316,43 @@ button:focus{
     font-size: 36px;
 }
 
-.footer-section .menu-list a {
+.section-footer .menu-list a {
     border-radius: 2px;
     color: whitesmoke;
     display: block;
     padding: 0.4rem 0rem;
 }
 
-.footer-section .menu-list a:hover {
+.section-footer .menu-list a:hover {
     color: $primaryColor !important;
     background-color: transparent;
 }
 
-.footer-section .menu-list a:focus {
+.section-footer .menu-list a:focus {
     color: $primaryColor !important;
     background-color: transparent;
 }
 
-.footer-section .social-icon{
+
+.section-footer .footer-social{
+    margin-top: 1rem;
+}
+
+.section-footer .social-icon{
     color: $white;
     font-size: 24px;
     margin-right: 24px;
 }
+
+.section-footer .footer-address{
+    line-height: 32px;
+}
+
+.section-footer .footer-map:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 
 // Media Queries
 @media screen and (min-width: 960px) {
@@ -283,6 +361,9 @@ button:focus{
 
 @media screen and (max-width: 540px) {
     // Common Style
+    .btm-sm-full-width{
+        width: 90vw;
+    }
 
     /* Styles go here */
     .loading-title{
@@ -303,12 +384,16 @@ button:focus{
         letter-spacing: 5px;
     }
 
-    .section-intro, .section-program {
+    .section-intro, .section-program, .section-footer {
         padding: 1rem;
         min-height: 80vh;
     }
     
     .footer-title{
         font-size: 24px;
+    }
+
+    .footer-social{
+        margin: 1rem 0;
     }
 }
