@@ -58,18 +58,18 @@ InstaFeed.propTypes = {
 
 export default () => (
   <StaticQuery
-  query={graphql`
-    query InstaFeedQuery {
-      allInstaNode {
-        totalCount
-        nodes {
-          thumbnails {
-            src
-          }
-        }
-      }
-    }
-  `}
+  // query={graphql`
+  //   query InstaFeedQuery {
+  //     allInstaNode {
+  //       totalCount
+  //       nodes {
+  //         thumbnails {
+  //           src
+  //         }
+  //       }
+  //     }
+  //   }
+  // `}
   render={(data, count) => <InstaFeed data={data} count={count} />}
 />
 )
