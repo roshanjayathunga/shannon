@@ -365,6 +365,10 @@ button:focus{
         width: 90vw;
     }
 
+    .content-area{
+        padding: 1rem;
+    }
+
     /* Styles go here */
     .loading-title{
         font-size: 36px;
@@ -384,11 +388,14 @@ button:focus{
         letter-spacing: 5px;
     }
 
-    .section-intro, .section-program, .section-footer {
+    .section-intro, .section-program, .section-footer, .about-wrap, .about-mission, .about-values, .about-methodology{
         padding: 1rem;
-        min-height: 80vh;
     }
-    
+
+    .section-about{
+        padding-top: 3rem;
+    }
+
     .footer-title{
         font-size: 24px;
     }

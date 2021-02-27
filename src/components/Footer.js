@@ -76,10 +76,7 @@ const Footer = class extends React.Component {
     
           <Grid item xs={12} md={4} >
               <h4>We currently conduct our classes at</h4>
-              <div className="flex">
-                <a title="facebook" href="#" className="social-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </a>
+              <div>
                 <div class="footer-address">
                   <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">The Sooriya Village,</span> <br/>
                   <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">49 Skelton Rd,  </span> <br/>
@@ -90,10 +87,7 @@ const Footer = class extends React.Component {
               <br/>
 
               <h4>Contact Us On</h4>
-              <div className="flex">
-                <a title="facebook" href="#" className="social-icon">
-                  <i class="fas fa-phone-alt"></i>
-                </a>
+              <div>
                 <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">0777 768 769</span>
               </div>
           </Grid>
