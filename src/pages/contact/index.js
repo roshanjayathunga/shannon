@@ -92,7 +92,7 @@ export default class Index extends React.Component {
                     variant="outlined"
                   />
 
-                  <Button
+                  <div
                     type="submit"
                     fullWidth
                     variant="contained"
@@ -100,7 +100,7 @@ export default class Index extends React.Component {
                     className="btn-primary"
                   >
                     Submit
-                  </Button>
+                  </div>
                 </form>
               </div>
             </Grid>

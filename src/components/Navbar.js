@@ -109,9 +109,9 @@ export default function Navbar() {
               {...(checked ? { timeout: 2000 } : {})}
         >
          <ListItem className="flex justify-center">
-          <Button variant="contained" color="primary" className="btn-accent">
+          <div variant="contained" color="primary" className="btn-accent">
             Join Now
-          </Button>
+          </div>
         </ListItem>         
         </Slide>
 
@@ -153,9 +153,9 @@ export default function Navbar() {
       ))}
       <div className="navbar" >
          <Link to="/"><span className="logo">Sesquipedalian</span></Link>
-         <Button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
+         <div onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
             <i className={`fas fa-bars ${classes.menuIcon}`}></i>
-        </Button>
+        </div>
       </div>
     </div>
   );

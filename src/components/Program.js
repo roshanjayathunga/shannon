@@ -37,16 +37,13 @@ const Program = (props) => {
                 {props.subtitle}
             </Typography>
           </div>
-          <Button size="small" color="primary">
+          <div size="small" color="primary">
           Learn More
-        </Button>
+        </div>
           
         </CardContent>
       </CardActionArea>
       {/* <CardActions>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
       </CardActions> */}
     </Card>
   );
