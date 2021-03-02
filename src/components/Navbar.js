@@ -9,6 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Slide from '@material-ui/core/Slide';
+import { Location } from '@reach/router';
 
 import { TweenMax,TimelineLite, Power3, Expo } from "gsap";
 import { Link } from 'gatsby';
@@ -70,8 +71,6 @@ export default function Navbar() {
     // tl.from(heroImage, 3, {y: -1200, ease: Power3.easeOut},'Start')
     // .from(heroImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .5)
 
-    // console.log(app);
-
   });
 
   const [checked, setChecked] = React.useState(false);
@@ -95,7 +94,7 @@ export default function Navbar() {
       <List className={classes.fullList} >
          <i className={`fas fa-times ${classes.menuIcon} ${classes.menuClose}`}></i>
         
-         {window.location.pathname == '/program' ? (
+         {typeof window !== "undefined" && window.location.pathname == '/program' ? (
                [{title:'Launch',path:'/program#launch'}, {title:'Ignite',path:'/#ignite'}, {title:'Propel',path:'/#propel'}, {title:'Ascend',path:'/#ascend'}].map((item, index) => (
                 <React.Fragment key={item.title}>
                   <Slide direction="right" in={checked} mountOnEnter unmountOnExit
