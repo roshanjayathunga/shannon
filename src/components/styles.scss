@@ -15,12 +15,32 @@ body{
 }
 
 // Common Styles
+.bg-primary{
+    background-color: $primaryColor;
+}
+
+.bg-accent{
+    background-color: $accentColor;
+}
+
+.text-white{
+    color: $white;
+}
+
 .full-width-image{
     height: 100vh;
 }
 
 .content-area{
     padding: 3rem 5rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.ml-2{
+    margin-left: 2rem;
 }
 
 button{
@@ -73,6 +93,9 @@ button:focus{
 .btn-primary:hover{
     background-color: $secondaryColor;
 }
+.block{
+    display: block;
+}
 .flex{
     display: flex;
 }
@@ -89,6 +112,10 @@ button:focus{
 
 .list-item-icon{
     color: $textColor;
+}
+
+.text-small{
+    font-size: 12px;
 }
 
 // Loading Screen
@@ -200,7 +227,7 @@ button:focus{
     font-weight: 300;
 }
 
-.section-program{
+.section-program-home{
     min-height: 50vh;
     padding: 5rem;
 }
@@ -288,6 +315,16 @@ button:focus{
     background-color: $accentColor;
     color: $white;
 }
+
+// Program Page
+.section-program{
+    padding: 5rem;
+}
+
+.program-wrap{
+    min-height: 70vh;
+}
+
 
 // Contact Page
 .section-contact{
@@ -388,7 +425,9 @@ button:focus{
         letter-spacing: 5px;
     }
 
-    .section-intro, .section-program, .section-footer, .about-wrap, .about-mission, .about-values, .about-methodology{
+    .section-intro, .section-program-home, 
+    .section-footer, .about-wrap, 
+    .about-mission, .about-values, .about-methodology, .section-program {
         padding: 1rem;
     }
 

@@ -86,7 +86,7 @@ export const IndexPageTemplate = ({
       </Grid>
     </section>
 
-    <section className="section-program">
+    <section className="section-program-home">
       <Grid container 
             direction="row"
             justify="center"

@@ -24,11 +24,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
     // </section>
     <section className="section-about">
       <div className="about-wrap">
-        <br />
         <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen">
           About Sesquipedalian
         </h3>
-        <br />
         <p>
           The learners of today, step out into a highly competitive and complex world
           tomorrow.  In order to survive and thrive in a demanding environment, it is
