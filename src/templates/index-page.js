@@ -140,9 +140,9 @@ export const IndexPageTemplate = ({
       </Grid>
     </section>
       
-    <section className="section-insta">
+    {/* <section className="section-insta">
       <InstaFeed />
-    </section>
+    </section> */}
 
     <Messenger />
     

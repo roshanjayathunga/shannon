@@ -1,11 +1,38 @@
 import React from 'react'
 
 import Grid from '@material-ui/core/Grid';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 
 export default class ProgramIndexPage extends React.Component {
+  state = {
+    showSchedule: false
+  }
+
+  handleClickOpen = () => {
+    this.setState({
+      showSchedule: true
+    })
+  };
+
+  handleClose = () => {
+    this.setState({
+      showSchedule: false
+    })
+  };
   render() {
     return (
       <Layout>
@@ -50,7 +77,9 @@ export default class ProgramIndexPage extends React.Component {
             </h3>
             </Grid>
             <Grid item xs={12} sm={12} md={3}>
-              <button variant="contained" color="primary" className="btn btn-primary float-right btm-sm-full-width">
+              <button variant="contained" color="primary" className="btn btn-primary float-right btm-sm-full-width"
+                onClick={this.handleClickOpen}
+              >
                 Check Weekly Shedule
             </button>
             </Grid>
@@ -295,6 +324,75 @@ export default class ProgramIndexPage extends React.Component {
           </div>
 
         </section>
+
+        <Dialog
+          open={this.state.showSchedule}
+          onClose={this.handleClose}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle className="bg-accent text-white" id="alert-dialog-title" onClose={this.state.handleClose}>{"Weekly Schedule"}</DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              <TableContainer >
+                <Table c aria-label="simple table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell></TableCell>
+                      <TableCell >Sunday</TableCell>
+                      <TableCell >Tuesday</TableCell>
+                      <TableCell >Wednesday</TableCell>
+                      <TableCell >Thursday</TableCell>
+                      <TableCell >Friday</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody className="bg-accent-light">
+                      <TableRow>
+                        <TableCell >9.00-10.00 am</TableCell>
+                        <TableCell >Ignite</TableCell>
+                        <TableCell >-</TableCell>
+                        <TableCell >-</TableCell>
+                        <TableCell >-</TableCell>
+                        <TableCell >-</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell >3.00-4.00 pm</TableCell>
+                        <TableCell >-</TableCell>
+                        <TableCell >Launch</TableCell>
+                        <TableCell >Launch</TableCell>
+                        <TableCell >Launch</TableCell>
+                        <TableCell >Ignite </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell >4.00-5.00 pm</TableCell>
+                        <TableCell >Propel</TableCell>
+                        <TableCell >Ignite</TableCell>
+                        <TableCell >Ascend</TableCell>
+                        <TableCell >Propel</TableCell>
+                        <TableCell >Propel</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell >5.00-6.00 pm</TableCell>
+                        <TableCell >Ascend</TableCell>
+                        <TableCell >-</TableCell>
+                        <TableCell >-</TableCell>
+                        <TableCell >-</TableCell>
+                        <TableCell >-</TableCell>
+                      </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <button className="btn"
+                onClick={this.handleClose}
+              >
+                Ok
+            </button>
+          </DialogActions>
+        </Dialog>
       </Layout>
     )
   }

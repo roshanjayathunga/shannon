@@ -23,6 +23,10 @@ body{
     background-color: $accentColor;
 }
 
+.bg-accent-light{
+    background-color: $accentLightColor;
+}
+
 .text-white{
     color: $white;
 }
@@ -325,6 +329,9 @@ button:focus{
     min-height: 70vh;
 }
 
+.MuiDialog-paperWidthSm{
+    max-width: 700px !important;
+}
 
 // Contact Page
 .section-contact{
@@ -399,7 +406,7 @@ button:focus{
 @media screen and (max-width: 540px) {
     // Common Style
     .btm-sm-full-width{
-        width: 90vw;
+        width: 100%;
     }
 
     .content-area{
