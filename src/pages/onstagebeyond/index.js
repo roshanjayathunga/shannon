@@ -9,11 +9,10 @@ export default class ProgramIndexPage extends React.Component {
       <Layout>
         <section className="section-about">
           <div className="about-wrap">
-            <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen">
+            <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-2-widescreen">
               On Stage and Beyond
             </h3>
 
-            <br />
             <h3 className="has-text-weight-semibold is-size-3 is-size-5-mobile is-size-3-tablet is-size-3-widescreen">
               Performances
           </h3>

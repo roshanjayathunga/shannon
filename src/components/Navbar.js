@@ -108,7 +108,7 @@ export default function Navbar() {
                   </Slide>
                 </React.Fragment>
               ))
-    ) : ( [{title:'About Us',path:'/about'}, {title:'Our Programmes',path:'/program'}, {title:'On stage and Beyond',path:'/onstagebeyond'}, {title:'Gallery',path:'/gallery'}, {title:'Contact Us',path:'/contact'}].map((item, index) => (
+    ) : ( [{title:'About Us',path:'/about'}, {title:'Our Programmes',path:'/program'}, {title:'On stage and Beyond',path:'/onstagebeyond'}, {title:'Gallery',path:'/gallery'}, {title:'FAQ',path:'/faq'}, {title:'Contact Us',path:'/contact'}].map((item, index) => (
       <React.Fragment key={item.title}>
         <Slide direction="right" in={checked} mountOnEnter unmountOnExit
           style={{ transformOrigin: '0 0 0' }}

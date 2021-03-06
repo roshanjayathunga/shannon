@@ -24,7 +24,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
     // </section>
     <section className="section-about">
       <div className="about-wrap">
-        <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen">
+        <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-2-widescreen">
           About Sesquipedalian
         </h3>
         <p>

@@ -2,6 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 import { Button, Grid, TextField } from '@material-ui/core'
+import MenuItem from '@material-ui/core/MenuItem';
 
 function encode(data) {
   return Object.keys(data)
@@ -9,10 +10,14 @@ function encode(data) {
     .join('&')
 }
 
+
 export default class Index extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { isValidated: false }
+    this.state = { 
+      isValidated: false,
+      currency: ''
+    }
   }
 
   handleChange = (e) => {
@@ -34,7 +39,24 @@ export default class Index extends React.Component {
       .catch((error) => alert(error))
   }
 
+  handleChange = (event) => {
+    this.setState({
+      currency: event.target.value
+    })
+  };
+
   render() {
+    const currencies = [
+      {
+        value: 'Enrol',
+        label: 'Enrol',
+      },
+      {
+        value: 'Book a trial lesson',
+        label: 'Book a trial lesson',
+      }
+    ];
+    
     return (
       <Layout>
         <section className="section-contact">
@@ -43,7 +65,7 @@ export default class Index extends React.Component {
             justify="center"
             alignItems="center"
           >
-            <Grid item xs={0} sm={0} md={7} >
+            <Grid item xs={0} sm={0} md={5} >
               {/* <img src="https://images.pexels.com/photos/5063095/pexels-photo-5063095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" /> */}
               <div
                 style={{
@@ -55,13 +77,32 @@ export default class Index extends React.Component {
               ></div>
 
             </Grid>
-            <Grid item xs={12} sm={12} md={5} >
+            <Grid item xs={12} sm={12} md={7} >
               <div className="contact-wrap">
-                <h3 className="has-text-weight-semibold is-size-2 is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
+                <h3 className="has-text-weight-semibold is-size-2 is-size-3-mobile is-size-2-tablet is-size-2-widescreen">
                   Contact Us
                 </h3>
 
                 <form>
+
+                  <TextField
+                    id="standard-select-currency"
+                    select
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                    required
+                    value={this.state.currency}
+                    onChange={this.handleChange}
+                    label="Please select option"
+                  >
+                    {currencies.map((option) => (
+                      <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+
                   <TextField
                     variant="outlined"
                     margin="normal"
@@ -92,15 +133,9 @@ export default class Index extends React.Component {
                     variant="outlined"
                   />
 
-                  <div
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    color="primary"
-                    className="btn-primary"
-                  >
+                  <button variant="contained" color="primary" className="btn btn-primary btm-sm-full-width">
                     Submit
-                  </div>
+                  </button>
                 </form>
               </div>
             </Grid>
