@@ -16,19 +16,19 @@ body{
 
 // Common Styles
 .bg-primary{
-    background-color: $primaryColor;
+    background-color: $primaryColor !important;
 }
 
 .bg-accent{
-    background-color: $accentColor;
+    background-color: $accentColor !important;
 }
 
 .bg-accent-light{
-    background-color: $accentLightColor;
+    background-color: $accentLightColor !important;
 }
 
 .text-white{
-    color: $white;
+    color: $white !important;
 }
 
 .full-width-image{
@@ -78,7 +78,7 @@ button:focus{
     min-width: 200px;
     padding: 0.8rem;
     background-color: $primaryColor;
-    color: $white;
+    color: $textColor;
     font-size: 14px;
     border-radius: 0;
     letter-spacing: 2px;
@@ -185,7 +185,7 @@ button:focus{
 .hero-title{
     padding: 1.5rem;
     font-size: 82px;
-    color: $primaryColor;
+    color: $white;
     font-weight: 600;
     letter-spacing: 8px;
 }
@@ -226,9 +226,9 @@ button:focus{
 }
 
 .intro-description{
-    font-size: 21px;
+    font-size: 18px;
     line-height: 40px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .section-program-home{
@@ -265,6 +265,40 @@ button:focus{
     width: auto;
     font-size: 13px;
     border-radius: 20px;
+}
+
+.testimonial-wrap{
+    padding: 0 5rem;
+}
+
+.testnomial-title{
+    height: 60vh;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.testimonials-item .description{
+    font-size: 18px;
+    line-height: 32px;
+    font-weight:400;
+}
+
+.testimonials-item .author-name{
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.testimonials-item .author-info{
+    font-size: 16px;
+    line-height: 24px;
+    font-style: italic;
+    text-align: right;
 }
 
 .section-insta{
@@ -332,6 +366,8 @@ button:focus{
 .MuiDialog-paperWidthSm{
     max-width: 700px !important;
 }
+
+
 
 // Contact Page
 .section-contact{

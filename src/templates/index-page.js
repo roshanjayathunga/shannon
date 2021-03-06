@@ -14,6 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Program from '../components/Program'
 import InstaFeed from '../components/InstaFeed'
 import Messenger from '../components/Messenger'
+import Testimonial from '../components/Testimonial'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,7 +96,7 @@ export const IndexPageTemplate = ({
 
       >
         <Grid item xs={12} sm={12} md={9}>
-          <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen">
+          <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-2-widescreen">
             Our Programmes
             </h3>
         </Grid>
@@ -143,6 +144,7 @@ export const IndexPageTemplate = ({
     {/* <section className="section-insta">
       <InstaFeed />
     </section> */}
+    <Testimonial />
 
     <Messenger />
     

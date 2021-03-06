@@ -78,9 +78,9 @@ const Footer = class extends React.Component {
               <h4>We currently conduct our classes at</h4>
               <div>
                 <div class="footer-address">
-                  <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">The Sooriya Village,</span> <br/>
-                  <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">49 Skelton Rd,  </span> <br/>
-                  <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">Colombo 5.</span>
+                  <b><span>The Sooriya Village,</span></b> <br/>
+                  <b><span>49 Skelton Rd,  </span></b> <br/>
+                  <b><span>Colombo 5.</span></b> 
                 </div>
               </div>
 
@@ -88,7 +88,7 @@ const Footer = class extends React.Component {
 
               <h4>Contact Us On</h4>
               <div>
-                <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">0777 768 769</span>
+                <b><span>0777 768 769</span></b>
               </div>
           </Grid>
 
