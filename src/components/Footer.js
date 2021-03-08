@@ -27,7 +27,7 @@ const Footer = class extends React.Component {
         </Grid>
 
         <Grid container>
-          <Grid item xs={12} md={3} >
+          <Grid item xs={12} md={4} >
             <ul className="menu-list">
               <li>
                 <Link to="/" className="navbar-item">
@@ -60,8 +60,10 @@ const Footer = class extends React.Component {
                 </Link>
               </li>
             </ul>
-
-            <div className="footer-social">
+          </Grid>
+    
+          <Grid item xs={12} md={4} >
+          <div className="footer-social">
               <a title="facebook" href="https://facebook.com" className="social-icon">
                 <i className="fab fa-facebook-f"></i>
               </a>
@@ -73,11 +75,12 @@ const Footer = class extends React.Component {
               </a>
             </div>
           </Grid>
-    
+
           <Grid item xs={12} md={4} >
-              <h4>We currently conduct our classes at</h4>
+          
               <div>
                 <div class="footer-address">
+                <p>We currently conduct our classes at</p>
                   <b><span>The Sooriya Village,</span></b> <br/>
                   <b><span>49 Skelton Rd,  </span></b> <br/>
                   <b><span>Colombo 5.</span></b> 
@@ -86,19 +89,10 @@ const Footer = class extends React.Component {
 
               <br/>
 
-              <h4>Contact Us On</h4>
-              <div>
+              <div class="footer-address">
+                <p>Contact Us On</p>
                 <b><span>0777 768 769</span></b>
               </div>
-          </Grid>
-
-          <Grid item xs={12} md={5} >
-            <div className="footer-map">
-              <a href="https://g.page/sooriyavillage?share" target="_blank">
-                <img src={location} />
-              </a>
-
-            </div>
           </Grid>
 
         </Grid>

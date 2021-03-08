@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -11,11 +11,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Slide from '@material-ui/core/Slide';
 import { Location } from '@reach/router';
 
-import { TweenMax,TimelineLite, Power3, Expo } from "gsap";
+import { TweenMax, TimelineLite, Power3, Expo } from "gsap";
 import { Link } from 'gatsby';
 
 const useStyles = makeStyles({
-  root:{
+  root: {
     paddingTop: '4px',
     paddingBottom: '4px'
   },
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     fontSize: '36px !important',
     color: '#ffffff',
   },
-  menuClose:{
+  menuClose: {
     position: 'absolute',
     top: '0',
     right: '0',
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     cursor: 'pointer',
     color: '#131313'
   },
-  fullList: { 
+  fullList: {
     width: 'auto',
     minWidth: '300px',
     width: '30vW',
@@ -45,13 +45,16 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    textAlign:'center',
-    backgroundColor:'#fdbd11'
+    textAlign: 'center',
+    backgroundColor: '#fdbd11'
   },
-  listItem:{
+  listItem: {
     fontSize: '18px !important',
     paddingTop: '4px !important',
     paddingBottom: '4px !important',
+  },
+  listItemSub:{
+    fontSize: '14px !important',
   }
 });
 
@@ -62,15 +65,29 @@ export default function Navbar() {
   });
 
   let app = useRef(null);
-  let tl = new TimelineLite()
+  let tl = new TimelineLite();
+
+  let navMenu = [{ title: 'Home', path: '/' }, { title: 'About Us', path: '/about' }, { title: 'Our Programmes', path: '/program' }, { title: 'On stage and Beyond', path: '/onstagebeyond' }, { title: 'Gallery', path: '/gallery' }, { title: 'FAQ', path: '/faq' }, { title: 'Contact Us', path: '/contact' }]
+  let navMenuSub = []
+  let path= '';
+
+  if (typeof window !== "undefined") {
+    path = window.location.pathname;
+
+    if (path == '/program') {
+      navMenuSub = [{ title: 'Launch To Ascent', path: '#launchToAscent' }, { title: 'Launch', path: '#launch' }, { title: 'Propel', path: '#propel' }, { title: 'Ascend', path: '#ascend' }]
+    }
+
+    if (path == '/about') {
+      navMenuSub = [{ title: 'Aboutss', path: '/program#launch' }, { title: 'Ignite', path: '/#ignite' }, { title: 'Propel', path: '/#propel' }, { title: 'Ascend', path: '/#ascend' }]
+    }
+  }
 
   useEffect(() => {
- 
-    TweenMax.to(".navbar", 3, {css:{visibility:'visible'}})
+    TweenMax.to(".navbar", 3, { css: { visibility: 'visible' } })
 
     // tl.from(heroImage, 3, {y: -1200, ease: Power3.easeOut},'Start')
     // .from(heroImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .5)
-
   });
 
   const [checked, setChecked] = React.useState(false);
@@ -90,68 +107,68 @@ export default function Navbar() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
       className="navbar-collapse"
-    > 
+    >
       <List className={classes.fullList} >
-         <i className={`fas fa-times ${classes.menuIcon} ${classes.menuClose}`}></i>
-        
-         {typeof window !== "undefined" && window.location.pathname == '/program' ? (
-               [{title:'Launch',path:'/program#launch'}, {title:'Ignite',path:'/#ignite'}, {title:'Propel',path:'/#propel'}, {title:'Ascend',path:'/#ascend'}].map((item, index) => (
-                <React.Fragment key={item.title}>
-                  <Slide direction="right" in={checked} mountOnEnter unmountOnExit
-                    style={{ transformOrigin: '0 0 0' }}
-                    {...(checked ? { timeout: 1000 * index / 4 } : {})}
-                  ><Link to={item.path}>
-                    <ListItem button className={classes.listItem}>
-                      <ListItemText primary={item.title}  />
-                    </ListItem>
-                    </Link>
-                  </Slide>
-                </React.Fragment>
-              ))
-    ) : ( [{title:'About Us',path:'/about'}, {title:'Our Programmes',path:'/program'}, {title:'On stage and Beyond',path:'/onstagebeyond'}, {title:'Gallery',path:'/gallery'}, {title:'FAQ',path:'/faq'}, {title:'Contact Us',path:'/contact'}].map((item, index) => (
-      <React.Fragment key={item.title}>
+        <i className={`fas fa-times ${classes.menuIcon} ${classes.menuClose}`}></i>
+
+        {navMenu.map((item, index) => (
+          <React.Fragment key={item.title}>
+            <Slide direction="right" in={checked} mountOnEnter unmountOnExit
+              style={{ transformOrigin: '0 0 0' }}
+              {...(checked ? { timeout: 1000 * index / 4 } : {})}
+            ><Link to={item.path}>
+                <ListItem button className={classes.listItem}>
+                  <ListItemText primary={item.title} />
+                </ListItem>
+                <div>
+                {item.path == path ? (
+                      navMenuSub.map((subItem, subIndex) => {
+                        return (
+                          <Link to={item.path + subItem.path }>
+                            <ListItem button className="nav-item-sub">
+                                <ListItemText className="nav-item-sub-text" primary={subItem.title} />
+                            </ListItem>
+                          </Link>
+                        )
+                      })
+                  ) :(null)}
+              </div>
+              </Link>
+
+            </Slide>
+          </React.Fragment>
+        ))}
+
         <Slide direction="right" in={checked} mountOnEnter unmountOnExit
           style={{ transformOrigin: '0 0 0' }}
-          {...(checked ? { timeout: 1000 * index / 4 } : {})}
-        ><Link to={item.path}>
-          <ListItem button className={classes.listItem}>
-            <ListItemText primary={item.title}  />
-          </ListItem>
-          </Link>
-        </Slide>
-      </React.Fragment>
-    )))}
-
-        <Slide direction="right" in={checked} mountOnEnter unmountOnExit
-              style={{ transformOrigin: '0 0 0' }}
-              {...(checked ? { timeout: 2000 } : {})}
+          {...(checked ? { timeout: 2000 } : {})}
         >
-         <ListItem className="flex justify-center">
-          <button variant="contained" color="primary" className="btn btn-accent">
-            Join Now
+          <ListItem className="flex justify-center">
+            <button variant="contained" color="primary" className="btn btn-accent">
+              Join Now
           </button>
-        </ListItem>         
+          </ListItem>
         </Slide>
 
-        
+
         <Slide direction="right" in={checked} mountOnEnter unmountOnExit
           style={{ transformOrigin: '0 0 0' }}
           {...(checked ? { timeout: 2300 } : {})}
-        > 
+        >
           <ListItem className="navbar-social-wrap">
             <Link to="https://facebook.com">
-              <span  className="social-icon">
-                 <i className="fab fa-facebook-f"></i>
+              <span className="social-icon">
+                <i className="fab fa-facebook-f"></i>
               </span>
             </Link>
             <Link to="https://instagram.com">
-              <span  className="social-icon">
-                 <i className="fab fa-instagram"></i>
+              <span className="social-icon">
+                <i className="fab fa-instagram"></i>
               </span>
             </Link>
             <Link to="https://twitter.com">
-              <span  className="social-icon">
-                 <i class="fab fa-twitter"></i>
+              <span className="social-icon">
+                <i class="fab fa-twitter"></i>
               </span>
             </Link>
           </ListItem>
@@ -170,9 +187,9 @@ export default function Navbar() {
         </React.Fragment>
       ))}
       <div className="navbar" >
-         <Link to="/"><span className="logo">Sesquipedalian</span></Link>
-         <button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
-            <i className={`fas fa-bars ${classes.menuIcon}`}></i>
+        <Link to="/"><span className="logo">Sesquipedalian</span></Link>
+        <button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
+          <i className={`fas fa-bars ${classes.menuIcon}`}></i>
         </button>
       </div>
     </div>

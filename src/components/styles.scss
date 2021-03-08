@@ -39,12 +39,20 @@ body{
     padding: 3rem 5rem;
 }
 
+.mt-5{
+    margin-top: 5rem;
+}
+
 .mt-2{
     margin-top: 2rem;
 }
 
 .ml-2{
     margin-left: 2rem;
+}
+
+.pt-5{
+    padding-top: 5rem;
 }
 
 button{
@@ -149,7 +157,8 @@ button:focus{
 
 // Landing Page and Navbar
 .MuiTypography-body1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     text-align: center;
     color: #131313;
 }
@@ -176,6 +185,16 @@ button:focus{
     color: $textColor;
     font-size: 24px;
     padding: 0 15px;
+}
+
+.nav-item-sub{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.nav-item-sub-text .MuiTypography-body1{
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .index-page{
@@ -401,7 +420,7 @@ button:focus{
 .section-footer{
     background-color: $accentColor !important;
     min-height: 45vh;
-    padding: 3rem 5rem;
+    padding: 1rem 5rem;
     color: $white;
 }
 
@@ -412,10 +431,11 @@ button:focus{
 }
 
 .section-footer .menu-list a {
+    font-size: 14px;
     border-radius: 2px;
     color: whitesmoke;
     display: block;
-    padding: 0.4rem 0rem;
+    padding: 0.2rem 0rem;
 }
 
 .section-footer .menu-list a:hover {
@@ -428,11 +448,6 @@ button:focus{
     background-color: transparent;
 }
 
-
-.section-footer .footer-social{
-    margin-top: 1rem;
-}
-
 .section-footer .social-icon{
     color: $white;
     font-size: 24px;
@@ -440,7 +455,8 @@ button:focus{
 }
 
 .section-footer .footer-address{
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .section-footer .footer-map:hover{

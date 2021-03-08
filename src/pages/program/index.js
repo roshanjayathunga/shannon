@@ -84,7 +84,7 @@ export default class ProgramIndexPage extends React.Component {
             </button>
             </Grid>
           </Grid>
-          <div id="launch" className="program-wrap mt-2">
+          <div id="launchToAscent" className="program-wrap mt-2">
             <Grid
               container
               direction="row"
@@ -149,7 +149,7 @@ export default class ProgramIndexPage extends React.Component {
             </Grid>
           </div>
 
-          <div id="launch" className="program-wrap mt-2">
+          <div id="launch" className="program-wrap mt-2 pt-5">
             <Grid
               container
               direction="row"
@@ -194,7 +194,7 @@ export default class ProgramIndexPage extends React.Component {
             </Grid>
           </div>
 
-          <div className="program-wrap mt-2">
+          <div  id="propel" className="program-wrap mt-2 pt-5" >
             <Grid
               container
               direction="row"
@@ -257,7 +257,7 @@ export default class ProgramIndexPage extends React.Component {
             </Grid>
           </div>
 
-          <div className="program-wrap mt-2">
+          <div id="ascend" className="program-wrap mt-2 pt-5">
             <Grid
               container
               direction="row"
