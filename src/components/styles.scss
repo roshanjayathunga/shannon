@@ -105,6 +105,10 @@ button:focus{
 .btn-primary:hover{
     background-color: $secondaryColor;
 }
+
+.btn-fullwidth{
+    width: 100%
+}
 .block{
     display: block;
 }
