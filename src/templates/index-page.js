@@ -82,7 +82,23 @@ export const IndexPageTemplate = ({
           {/* <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen intro-heading">
             {heading}
           </h3> */}
-          <p className="intro-description">{description}</p>
+          <h1 className="intro-title">Learning builds character.</h1>
+          <h1 className="intro-title ml-3 mt--1">Theatre builds performers.</h1>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} >
+        </Grid>
+        <Grid item xs={12} sm={12} md={8} >
+          <p className="intro-description">Sesquipedalian Theatre-led Learning is a contemporary academic curriculum that brings the principles of the performing arts to a comprehensive language and personality development programme for children between the ages of 5 and 16.</p>
+          <p className="intro-description">With tools and techniques from the stage to enhance the experience, students can develop their academic, leadership, cognitive and social skills and reach their potential as high performers.</p>
+          
+          <div className="flex justify-center">
+          <Link to="/program">
+            <button variant="contained" color="primary" className="btn btn-link">
+              Learn More
+            </button>
+          </Link>
+
+          </div>
         </Grid>
       </Grid>
     </section>
@@ -227,41 +243,6 @@ const IndexPage = ({ data }) => {
 
     tl.from(heroImage, 5, { y: -1200, ease: Power3.easeOut }, 'Start')
       .from(heroImage.firstElementChild, 2, { scale: 1.6, ease: Power3.easeOut }, .5);
-
-    gsap.from('.intro-wrap', {
-      duration: 1,
-      y: 0,
-      opacity: '0',
-      ease: 'ease-in',
-      scrollTrigger: {
-        trigger: '.intro-heading',
-        start: 'top 60%',
-        end: 'bottom 60%',
-      }
-    })
-
-    gsap.from('.intro-heading', {
-      duration: 1.5,
-      y: 0,
-      opacity: '0',
-      ease: 'easeInOut',
-      scrollTrigger: {
-        trigger: '.intro-heading',
-        start: 'top 90%',
-        end: 'bottom 60%',
-      }
-    })
-    gsap.from('.intro-description', {
-      duration: 2,
-      y: 0,
-      opacity: '0',
-      ease: 'easeInOut',
-      scrollTrigger: {
-        trigger: '.intro-description',
-        start: 'top 90%',
-        end: 'bottom 60%',
-      }
-    })
 
   });
 

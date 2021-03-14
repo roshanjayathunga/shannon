@@ -67,7 +67,7 @@ export default function Navbar() {
   let app = useRef(null);
   let tl = new TimelineLite();
 
-  let navMenu = [{ title: 'Home', path: '/' }, { title: 'About Us', path: '/about' }, { title: 'Our Programmes', path: '/program' }, { title: 'On stage and Beyond', path: '/onstagebeyond' }, { title: 'Gallery', path: '/gallery' }, { title: 'FAQ', path: '/faq' }, { title: 'Contact Us', path: '/contact' }]
+  let navMenu = [{ title: 'Home', path: '/' }, { title: 'About Us', path: '/about' }, { title: 'Curriculum', path: '/program' }, { title: 'On stage and Beyond', path: '/onstagebeyond' }, { title: 'Gallery', path: '/gallery' }, { title: 'FAQ', path: '/faq' }, { title: 'Contact Us', path: '/contact' }]
   let navMenuSub = []
   let path= '';
 

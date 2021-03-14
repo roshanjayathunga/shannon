@@ -39,16 +39,23 @@ body{
     padding: 3rem 5rem;
 }
 
+.mt-2{
+    margin-top: 2rem;
+}
 .mt-5{
     margin-top: 5rem;
 }
 
-.mt-2{
-    margin-top: 2rem;
+.mt--1{
+    margin-top: -1rem;
 }
+
 
 .ml-2{
     margin-left: 2rem;
+}
+.ml-3{
+    margin-left: 3rem;
 }
 
 .pt-5{
@@ -87,7 +94,7 @@ button:focus{
     padding: 0.8rem;
     background-color: $primaryColor;
     color: $textColor;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 0;
     letter-spacing: 2px;
 }
@@ -98,10 +105,27 @@ button:focus{
     padding: 0.8rem;
     background-color: $accentColor;
     color: $white;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 0;
     letter-spacing: 2px;
 }
+
+.btn-link{
+    min-width: 200px;
+    padding: 0.8rem;
+    background-color: $white;
+    color: $primaryColor;
+    font-size: 16px;
+    border-radius: 0;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.btn-link:hover{
+    border-bottom: 1px solid $primaryColor;
+}
+
+
+
 .btn-primary:hover{
     background-color: $secondaryColor;
 }
@@ -161,7 +185,7 @@ button:focus{
 
 // Landing Page and Navbar
 .MuiTypography-body1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
     color: #131313;
@@ -207,7 +231,7 @@ button:focus{
 
 .hero-title{
     padding: 1.5rem;
-    font-size: 82px;
+    font-size: 90px;
     color: $white;
     font-weight: 600;
     letter-spacing: 8px;
@@ -233,19 +257,24 @@ button:focus{
 }
 
 .main-title{
-    font-size: 72px;
+    font-size: 62px;
     font-weight: 600;
     color: $white;
 }
 
 .section-intro{
-    background-color: $accentColor;
-    color: $white;
+    background-color: $white;
+    color: $textColor;
     padding: 3rem 5rem;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.intro-title{
+    font-size: 72px;
+    font-weight: 600;
 }
 
 .intro-description{
@@ -256,7 +285,7 @@ button:focus{
 
 .section-program-home{
     min-height: 50vh;
-    padding: 5rem;
+    padding: 0 5rem;
 }
 
 .program-card .info-wrap{
@@ -291,11 +320,11 @@ button:focus{
 }
 
 .testimonial-wrap{
-    padding: 0 5rem;
+    padding: 3rem 5rem;
 }
 
 .testnomial-title{
-    height: 60vh;
+    height: 50vh;
     background-color: $primaryColor;
     display: flex;
     justify-content: center;
