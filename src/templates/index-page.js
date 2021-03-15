@@ -82,14 +82,14 @@ export const IndexPageTemplate = ({
           {/* <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-1-widescreen intro-heading">
             {heading}
           </h3> */}
-          <h1 className="intro-title">Learning builds character.</h1>
-          <h1 className="intro-title ml-3 mt--1">Theatre builds performers.</h1>
+          <h1 className="main-title">Learning builds character.</h1>
+          <h1 className="main-title ml-3 mt--1">Theatre builds performers.</h1>
         </Grid>
         <Grid item xs={12} sm={12} md={4} >
         </Grid>
         <Grid item xs={12} sm={12} md={8} >
-          <p className="intro-description">Sesquipedalian Theatre-led Learning is a contemporary academic curriculum that brings the principles of the performing arts to a comprehensive language and personality development programme for children between the ages of 5 and 16.</p>
-          <p className="intro-description">With tools and techniques from the stage to enhance the experience, students can develop their academic, leadership, cognitive and social skills and reach their potential as high performers.</p>
+          <p className="page-description">Sesquipedalian Theatre-led Learning is a contemporary academic curriculum that brings the principles of the performing arts to a comprehensive language and personality development programme for children between the ages of 5 and 16.</p>
+          <p className="page-description">With tools and techniques from the stage to enhance the experience, students can develop their academic, leadership, cognitive and social skills and reach their potential as high performers.</p>
           
           <div className="flex justify-center">
           <Link to="/program">

@@ -42,6 +42,12 @@ body{
 .mt-2{
     margin-top: 2rem;
 }
+.mt-3{
+    margin-top: 2rem;
+}
+.mt-4{
+    margin-top: 4rem;
+}
 .mt-5{
     margin-top: 5rem;
 }
@@ -61,6 +67,34 @@ body{
 .pt-5{
     padding-top: 5rem;
 }
+
+.main-title{
+    font-size: 72px;
+    font-weight: 600;
+    color: $textColor;
+}
+
+.main-sub-title{
+    font-size: 28px;
+    font-style: italic;
+}
+
+.page-description{
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.section-title{
+
+}
+
+.section-sub-title{
+    
+}
+
+
+
 
 button{
     font-family: 'Poppins', sans-serif !important;
@@ -123,8 +157,6 @@ button:focus{
 .btn-link:hover{
     border-bottom: 1px solid $primaryColor;
 }
-
-
 
 .btn-primary:hover{
     background-color: $secondaryColor;
@@ -256,12 +288,6 @@ button:focus{
     padding: 12px 8px;
 }
 
-.main-title{
-    font-size: 62px;
-    font-weight: 600;
-    color: $white;
-}
-
 .section-intro{
     background-color: $white;
     color: $textColor;
@@ -270,17 +296,6 @@ button:focus{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.intro-title{
-    font-size: 72px;
-    font-weight: 600;
-}
-
-.intro-description{
-    font-size: 18px;
-    line-height: 40px;
-    font-weight: 400;
 }
 
 .section-program-home{
@@ -359,19 +374,13 @@ button:focus{
 
 // About Page
 .section-about{
-    background-color: $white;
-    color: $textColor;
     min-height: 100vh;
+    padding: 5rem;
 }
 
 .section-about p{
     font-size: 18px;
     line-height: 28px;
-}
-
-.about-wrap{
-    padding: 5rem;
-    min-height: 100vh;
 }
 
 .about-mission{
@@ -533,7 +542,7 @@ button:focus{
     }
 
     .section-intro, .section-program-home, 
-    .section-footer, .about-wrap, 
+    .section-footer,
     .about-mission, .about-values, .about-methodology, .section-program {
         padding: 1rem;
     }
