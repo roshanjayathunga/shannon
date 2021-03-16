@@ -31,7 +31,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       >
 
         <Grid item xs={12} sm={12} md={6} >
-            <h1 className="main-title mt-4">All the world’s</h1>
+            <h1 className="main-title mt-4 mr-2 text-right">All the world’s</h1>
         </Grid>
         <Grid item xs={12} sm={12} md={6} >
           <h1 className="main-title">a stage.</h1>
@@ -42,17 +42,35 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         </Grid>
       </Grid>
 
-    <Grid container
+      <Grid container
         direction="row"
         justify="center"
         className="mt-3"
       >
         <Grid item xs={12} sm={12} md={6} >
-            <h1 className="main-title">Getting into character.</h1>
+            <h1 className="main-title mt-4 mr-2 text-right">Getting into</h1>
         </Grid>
         <Grid item xs={12} sm={12} md={6} >
-          <h2 className="main-sub-title mt-3">Social and Emotional Learning (SEL)</h2>
+            <h1 className="main-title">character.</h1>
+          <h2 className="main-sub-title">Social and Emotional Learning (SEL)</h2>
           <p className="page-description mt-2">We believe great performance comes from authenticity. At Sesquipedalian, we design Social and Emotional Learning (SEL) environments to give your child a sense of empathy, social awareness and interpersonal acuity by simultaneously stimulating thinking, feeling and doing.</p>
+        </Grid>
+      </Grid>
+
+      <Grid container
+        direction="row"
+        justify="center"
+        className="mt-3"
+      >
+        <Grid item xs={12} sm={12} md={6} >
+            <h1 className="main-title mt-4 mr-2 text-right">Setting the</h1>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} >
+            <h1 className="main-title">stage.</h1>
+          <h2 className="main-sub-title">The team behind Sesquipedalian</h2>
+          <p className="page-description mt-2">Amanda Paiva has always been passionate about theatre as a tool to enable young learners to express themselves creatively, articulately and effectively.</p>
+          <p className="page-description mt-2">Over the course of her prolific career, she’s earned qualifications such as the Associate Teachers Certification from Trinity College London, a diploma in  Education and Certification in ESL training.  She has taught at Colombo International School since 2009 and founded the Spotlight Young Actors Studio in 2012.</p>
+          <p className="page-description mt-2">Following this success, Amanda launched Sesquipedalian, a holistic, theatre-led academic curriculum to bring performing arts from the stage to the classroom.</p>
         </Grid>
       </Grid>
     </section>
