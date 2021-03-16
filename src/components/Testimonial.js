@@ -21,10 +21,6 @@ export default class Testimonial extends React.Component {
     };
     return (
       <div className="testimonial-wrap">
-        <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-2-widescreen">
-          The Community
-            </h3>
-
         <Grid
           container
           direction="row"

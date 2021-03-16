@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({
       </div>
       <BackgroundSlider
       images={[image1, image2, image3, image4]}
-      duration={12} transition={3} />
+      duration={4} transition={3} />
     </div>
     
     
@@ -119,7 +119,7 @@ export const IndexPageTemplate = ({
       >
         <Grid item xs={12} sm={12} md={9}>
           <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-2-widescreen">
-            Our Programmes
+            Curriculum
             </h3>
         </Grid>
         <Grid item xs={12} sm={12} md={3}>

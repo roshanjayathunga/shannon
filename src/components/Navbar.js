@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
   menuIcon: {
     fontSize: '36px !important',
-    color: '#ffffff',
+    color: '#fdbd11',
   },
   menuClose: {
     position: 'absolute',
