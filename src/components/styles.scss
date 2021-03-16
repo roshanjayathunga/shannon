@@ -239,7 +239,7 @@ button:focus{
 .navbar{
     position: fixed;
     width: 100%;
-    background-color:$accentColor;
+    background-color:transparent;
     z-index: 1001;
     height:60px;
     visibility: hidden;
@@ -272,6 +272,14 @@ button:focus{
 
 .index-page{
     visibility: hidden;
+}
+
+.hero-background{
+    height: 100vh;
+    box-shadow: inset 0 0 0 2000px #3e300c73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-title{

@@ -16,6 +16,13 @@ import InstaFeed from '../components/InstaFeed'
 import Messenger from '../components/Messenger'
 import Testimonial from '../components/Testimonial'
 
+import BackgroundSlider from 'react-background-slider'
+
+import image1 from '../img/hero/hero1.jpg'
+import image2 from '../img/hero/hero2.jpg'
+import image3 from '../img/hero/hero3.jpg'
+import image4 from '../img/hero/hero4.jpg'
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -28,24 +35,18 @@ export const IndexPageTemplate = ({
   description,
   introImage,
   intro,
-  totalCount
+  totalCount,
+
 }) => (
   <div>
+    
     <div className="overlay">
       <h1 className="loading-title">Sesquipedalian</h1>
       <span className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">Theatre led learning</span>
     </div>
+
+    <div className="hero-background">
     <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-        boxShadow: 'inset 0 0 0 2000px #199d9552'
-      }}
-    >
-      <div
         style={{
           display: 'flex',
           height: '150px',
@@ -68,9 +69,14 @@ export const IndexPageTemplate = ({
             Join Now
           </button>
         </Link>
-
       </div>
+      <BackgroundSlider
+      images={[image1, image2, image3, image4]}
+      duration={12} transition={3} />
     </div>
+    
+    
+    
 
     <section className="section-intro">
       <Grid container
@@ -194,6 +200,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section> */}
+   
   </div>
 )
 
@@ -241,10 +248,11 @@ const IndexPage = ({ data }) => {
       ease: Expo.easeInOut
     })
 
-    tl.from(heroImage, 5, { y: -1200, ease: Power3.easeOut }, 'Start')
-      .from(heroImage.firstElementChild, 2, { scale: 1.6, ease: Power3.easeOut }, .5);
+    // tl.from(heroImage, 5, { y: -1200, ease: Power3.easeOut }, 'Start')
+    //   .from(heroImage.firstElementChild, 2, { scale: 1.6, ease: Power3.easeOut }, .5);
 
   });
+
 
   return (
     <Layout>
