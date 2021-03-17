@@ -24,7 +24,7 @@ import image3 from '../img/hero/heroslider3.jpg'
 import image4 from '../img/hero/heroslider4.jpg'
 
 import launch from '../img/program/launch.jpg'
-import ignite from '../img/program/ignite.jpg'
+import ignite from '../img/program/launch.jpg'
 import propel from '../img/program/propel.jpg'
 import ascend from '../img/program/ascend.jpg'
 
