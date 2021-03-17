@@ -68,6 +68,10 @@ body{
     margin-right: 2rem;
 }
 
+.p-0{
+    padding: 0 !important;
+}
+
 .pt-5{
     padding-top: 5rem;
 }
@@ -435,11 +439,27 @@ button:focus{
 
 // Gallery Page
 .section-gallery{
-    height: 60vh;
+    padding: 5rem;
 }
 
-.section-gallery .slide-img{
-    height: 50vh;
+.gallery-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.grid-list{
+    width: 100vW;
+    height: auto;
+}
+
+.MuiGridListTile-imgFullHeight{
+    object-fit: cover !important;
+}
+
+.gallery-img:hover{
+    cursor: pointer;
 }
 
 // FAQ page
@@ -551,6 +571,9 @@ button:focus{
     .section-footer,
     .about-mission, .about-values, .about-methodology, .section-program {
         padding: 1rem;
+    }
+    .section-gallery{
+        padding: 4rem 0rem;
     }
 
     .section-about{
