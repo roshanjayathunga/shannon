@@ -23,10 +23,10 @@ import image2 from '../img/hero/heroslider2.jpg'
 import image3 from '../img/hero/heroslider3.jpg'
 import image4 from '../img/hero/heroslider4.jpg'
 
-import launch from '../img/program/launch1.jpg'
-import ignite from '../img/program/ignite2.jpg'
-import propel from '../img/program/propel3.jpg'
-import ascend from '../img/program/ascend4.jpg'
+import launch from '../img/program/launch.jpg'
+import ignite from '../img/program/ignite.jpg'
+import propel from '../img/program/propel.jpg'
+import ascend from '../img/program/ascend.jpg'
 
 
 gsap.registerPlugin(ScrollTrigger);
