@@ -282,6 +282,10 @@ button:focus{
     align-items: center;
 }
 
+#ReactBackgroundSlider figure{
+    background-position-y: top !important;
+}
+
 .hero-title{
     padding: 1.5rem;
     font-size: 90px;

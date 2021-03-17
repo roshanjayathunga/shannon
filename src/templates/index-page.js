@@ -18,15 +18,15 @@ import Testimonial from '../components/Testimonial'
 
 import BackgroundSlider from 'react-background-slider'
 
-import image1 from '../img/hero/hero1.jpg'
-import image2 from '../img/hero/hero2.jpg'
-import image3 from '../img/hero/hero3.jpg'
-import image4 from '../img/hero/hero4.jpg'
+import image1 from '../img/hero/heroslider1.jpg'
+import image2 from '../img/hero/heroslider2.jpg'
+import image3 from '../img/hero/heroslider3.jpg'
+import image4 from '../img/hero/heroslider4.jpg'
 
-import launch from '../img/program/launch.jpg'
-import ignite from '../img/program/ignite.jpg'
-import propel from '../img/program/propel.jpg'
-import ascend from '../img/program/ascend.jpg'
+import launch from '../img/program/launch1.jpg'
+import ignite from '../img/program/ignite2.jpg'
+import propel from '../img/program/propel3.jpg'
+import ascend from '../img/program/ascend4.jpg'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({
       </div>
       <BackgroundSlider
       images={[image1, image2, image3, image4]}
-      duration={4} transition={3} />
+      duration={4} transition={2} />
     </div>
     
     <section className="section-intro">
