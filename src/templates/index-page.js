@@ -23,6 +23,12 @@ import image2 from '../img/hero/hero2.jpg'
 import image3 from '../img/hero/hero3.jpg'
 import image4 from '../img/hero/hero4.jpg'
 
+import launch from '../img/program/launch.jpg'
+import ignite from '../img/program/ignite.jpg'
+import propel from '../img/program/propel.jpg'
+import ascend from '../img/program/ascend.jpg'
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -75,9 +81,6 @@ export const IndexPageTemplate = ({
       duration={4} transition={3} />
     </div>
     
-    
-    
-
     <section className="section-intro">
       <Grid container
         direction="row"
@@ -131,28 +134,28 @@ export const IndexPageTemplate = ({
         </Grid>
 
         <Grid item xs={12} sm={12} md={3}>
-          <Program imgSrc={"https://images.pexels.com/photos/1815257/pexels-photo-1815257.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"}
+          <Program imgSrc={launch}
             title={"Launch"}
             subtitle={"Ages 5-7"}
             info={""}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={3}>
-          <Program imgSrc={"https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
+          <Program imgSrc={ignite}
             title={"Ignite"}
             subtitle={"Ages 8-10"}
             info={""}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={3}>
-          <Program imgSrc={"https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
+          <Program imgSrc={propel}
             title={"Propel"}
             subtitle={"Ages 11-13"}
             info={""}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={3}>
-          <Program imgSrc={"https://images.pexels.com/photos/4834822/pexels-photo-4834822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
+          <Program imgSrc={ascend}
             title={"Ascend"}
             subtitle={"Ages 14 and above"}
             info={""}

@@ -85,22 +85,20 @@ export default class Testimonial extends React.Component {
                 <div className="testimonials-item">
                   <p className="description">" I learn that teamwork is important, I have fun and I am now a performer! "
                     </p>
-                  <p className="author-name"> Amirah shakir</p>
-                  <p className="author-info">7 yeasr old</p>
+                  <p className="author-name"> Amirah shakir, <span className="author-info">7</span></p>
+
                 </div>
 
                 <div className="testimonials-item">
                   <p className="description">" I feel confident to participate in discussions and events! "
                     </p>
-                  <p className="author-name">Aron Rammogan</p>
-                  <p className="author-info">11 years old</p>
+                  <p className="author-name">Aron Rammogan, <span className="author-info">11</span></p>
                 </div>
 
                 <div className="testimonials-item">
                   <p className="description">" I’ve developed my interpersonal skills- Kavindrra Samarasekera "
                     </p>
-                  <p className="author-name">Kavindrra Samarasekera</p>
-                  <p className="author-info">12 years old</p>
+                  <p className="author-name">Kavindrra Samarasekera, <span className="author-info">12</span></p>
                 </div>
 
                 <div className="testimonials-item">

@@ -356,7 +356,7 @@ button:focus{
 }
 
 .testimonial-wrap{
-    padding: 3rem 5rem;
+    padding: 5rem 5rem 0rem 5rem;
 }
 
 .testnomial-title{
@@ -383,9 +383,10 @@ button:focus{
 }
 
 .testimonials-item .author-info{
-    font-size: 16px;
+    font-size: 16px !important;
     line-height: 24px;
-    font-style: italic;
+    font-weight: 400;
+    font-style: italic !important;
     text-align: right;
 }
 
@@ -404,35 +405,15 @@ button:focus{
     line-height: 28px;
 }
 
-.about-mission{
-    padding: 4rem 5rem;
-    background-color: $primaryColor;
-    color: $textColor;
+.about-img{
+    height: 300px;
+    width: fit-content;
+    object-fit: cover;
 }
 
-.about-values{
-    padding: 4rem 5rem;
-    background-color: $primaryColor;
-    color: $textColor;
-}
-
-.section-about .why-choose-list li{
-    font-size: 18px;
-    line-height: 32px;
-}
-
-.section-about .why-choose-list span{
-    margin-left: 8px;
-}
-
-.section-about .why-choose-list li ul li{
-    margin-left: 60px;
-}
-
-.about-methodology{
-    padding: 4rem 5rem;
-    background-color: $accentColor;
-    color: $white;
+.about-img-portrait{
+    height: 400px;
+    object-fit: contain;
 }
 
 // Program Page
