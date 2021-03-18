@@ -19,6 +19,10 @@ body{
     background-color: $primaryColor !important;
 }
 
+.bg-secondary{
+    background-color: $secondaryColor !important;
+}
+
 .bg-accent{
     background-color: $accentColor !important;
 }
@@ -40,7 +44,7 @@ body{
 }
 
 .mt-2{
-    margin-top: 2rem;
+    margin-top: 2rem !important;
 }
 .mt-3{
     margin-top: 3rem !important;
@@ -56,20 +60,26 @@ body{
     margin-top: -1rem;
 }
 
-
 .ml-2{
-    margin-left: 2rem;
+    margin-left: 2rem !important;
 }
 .ml-3{
-    margin-left: 3rem;
+    margin-left: 3rem !important;
+}
+.ml-5{
+    margin-left: 5rem !important;
 }
 
 .mr-2{
-    margin-right: 2rem;
+    margin-right: 2rem !important;
 }
 
 .p-0{
     padding: 0 !important;
+}
+
+.p-2{
+    padding: 2rem !important;
 }
 
 .pt-5{
@@ -79,7 +89,7 @@ body{
 .main-title{
     font-size: 64px;
     font-weight: 600;
-    color: $textColor;
+    color: $secondaryColor;
 }
 
 .main-sub-title{
@@ -93,16 +103,26 @@ body{
     font-weight: 400;
 }
 
-.section-title{
+.page-description-sm{
+    font-size: 16px;
+    line-height: 40px;
+}
 
+.page-description-lg{
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.section-title{
+    font-size: 42px;
+    font-weight: 600;
+    color: $textColor;
 }
 
 .section-sub-title{
-    
+    font-size: 21px;
+    font-style: italic;
 }
-
-
-
 
 button{
     font-family: 'Poppins', sans-serif !important;
@@ -182,10 +202,15 @@ button:focus{
 .justify-center{
     justify-content: center;
 }
+.justify-around{
+    justify-content: space-around;
+}
 .align-items-center{
     align-items: center;
 }
-
+.flex-column{
+    flex-direction: column;
+}
 .float-right {
     float: right;
 }
@@ -198,6 +223,9 @@ button:focus{
     text-align: right;
 }
 
+.text-bold{
+    font-weight: 600;
+}
 
 .list-item-icon{
     color: $textColor;
@@ -329,7 +357,7 @@ button:focus{
 
 .section-program-home{
     min-height: 50vh;
-    padding: 0 5rem;
+    padding: 0 4rem;
 }
 
 .program-card .info-wrap{
@@ -405,7 +433,7 @@ button:focus{
 // About Page
 .section-about{
     min-height: 100vh;
-    padding: 5rem;
+    padding: 4rem;
 }
 
 .section-about p{
@@ -426,11 +454,34 @@ button:focus{
 
 // Program Page
 .section-program{
-    padding: 5rem;
+    padding: 4rem;
 }
 
-.program-wrap{
-    min-height: 70vh;
+.program-tile{
+    width: 100%;
+    height: 125px;
+    background-color: #199d95;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.program-tile h1{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.program-tile p{
+    font-size: 16px;
+}
+
+.program-tile-img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .MuiDialog-paperWidthSm{
@@ -439,7 +490,7 @@ button:focus{
 
 // Gallery Page
 .section-gallery{
-    padding: 5rem;
+    padding: 4rem;
 }
 
 .gallery-wrap{
@@ -464,7 +515,7 @@ button:focus{
 
 // FAQ page
 .section-faq {
-    padding: 5rem;
+    padding: 4rem;
 }
 
 .faq-item{
@@ -476,7 +527,7 @@ button:focus{
     min-height: 100vh;
 }
 .contact-wrap{
-    padding: 5rem 3rem;
+    padding: 4rem 3rem;
 }
 
 // Insta Feed 

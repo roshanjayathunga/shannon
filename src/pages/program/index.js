@@ -15,7 +15,12 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
 import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+
+import cover from '../../img/curriculum/cover.jpg'
+import launch from '../../img/curriculum/launch.jpg'
+import ignite from '../../img/curriculum/ignite.jpg'
+import propel from '../../img/curriculum/propel.jpg'
+import ascend from '../../img/curriculum/ascend.jpg'
 
 export default class ProgramIndexPage extends React.Component {
   state = {
@@ -36,34 +41,9 @@ export default class ProgramIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        {/* <div
-          className="full-width-image-container margin-top-0"
-          style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
-            }}
-          >
-            Latest Stories
-          </h1>
-        </div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <BlogRoll />
-            </div>
-          </div>
-        </section> */}
 
         <section className="section-program">
-          <Grid
+          {/* <Grid
             container
             direction="row"
             justify="center"
@@ -73,7 +53,7 @@ export default class ProgramIndexPage extends React.Component {
             <Grid item xs={12} sm={12} md={9}
             >
               <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-2-widescreen">
-                Our Programmes
+                Curriculum
             </h3>
             </Grid>
             <Grid item xs={12} sm={12} md={3}>
@@ -83,245 +63,329 @@ export default class ProgramIndexPage extends React.Component {
                 Check Weekly Shedule
             </button>
             </Grid>
+          </Grid> */}
+
+          {/* Section 1 */}
+          <Grid container
+            direction="row"
+            justify="center"
+
+          >
+            <Grid item xs={12} sm={12} md={6} >
+              <h1 className="main-title mt-4 mr-2 text-right">Learning takes</h1>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} >
+              <h1 className="main-title">centre stage.</h1>
+              <h2 className="main-sub-title">Launch to Ascend curriculum</h2>
+            </Grid>
           </Grid>
-          <div id="launchToAscent" className="program-wrap mt-2">
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-              spacing={4}
-            >
-              <Grid item xs={12} sm={12} md={3}>
-                <div
-                  style={{
-                    backgroundImage: `url('https://images.pexels.com/photos/1815257/pexels-photo-1815257.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')`,
-                    width: '100%',
-                    height: '80vh',
-                    backgroundSize: 'cover',
-                    backgroundPositionX: 'center'
-                  }}
-                >
-                </div>
-              </Grid>
-              <Grid item xs={12} sm={12} md={9}>
-                <div className="program-info">
-                  <h3 className="has-text-weight-semibold is-size-3 is-size-5-mobile is-size-3-tablet is-size-3-widescreen">
-                    Launch to Ascend
-                  </h3>
-                  <p>
-                    The ‘Launch to Ascend’ language and personality enrichment programme provides learners with high-interest academic content
-                    presented through theatre led activities and resources that ensure students move progressively towards mastery in three key areas.
-                  </p>
-                  <br />
-                  <ul>
-                    <li>
-                      <i class="far fa-dot-circle list-item-icon"></i>
-                      <span> Language proficiency</span>
-                      <span className="block ml-2 mt-1 text-small"> To certify achievement in many aspects of your child’s education, work and in their personal life</span>
-                    </li>
-                    <li>
-                      <i class="far fa-dot-circle list-item-icon"></i>
-                      <span> Articulate and expressive communication</span>
-                      <span className="block ml-2 mt-1 text-small"> To enhance your child’s capacity to negotiate and express views</span>
-                    </li>
-                    <li>
-                      <i class="far fa-dot-circle list-item-icon"></i>
-                      <span> Higher order thinking skills</span>
-                      <span className="block ml-2 mt-1 text-small"> To expand your child’s ability to evaluate, analyze and think creatively.</span>
-                    </li>
-                  </ul>
 
-                  <br />
-                  <p>
-                    The curriculum ensures seamless progressive development across the breadth of the program,
-                    thus enabling students to pick up key skills complementary to their profiles at a comfortable pace, in a continuously supervised environment. At each level the content varies in scope and complexity ensuring continuous development.
-                  </p>
+          <Grid container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={3}
 
-                  <br />
-                  <p>
-                    At the end of each academic year students will perform in a public theatrical performance or
-                    community service project to demonstrate skills acquired and enhance talents.
-                  </p>
-                </div>
-
-              </Grid>
+          >
+            <Grid item xs={12} sm={12} md={6} >
+              <img src={cover} className="about-img" />
             </Grid>
-          </div>
-
-          <div id="launch" className="program-wrap mt-2 pt-5">
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-              spacing={4}
-            >
-              <Grid item xs={12} sm={12} md={9}>
-                <div className="program-info">
-                  <h3 className="has-text-weight-semibold is-size-3 is-size-5-mobile is-size-3-tablet is-size-3-widescreen">
-                    Launch (For ages 5-7)
-                  </h3>
-                  <p>
-                    Our exploration based approach to learning ensures an exceptional start for your child. Students are introduced to thematic content,
-                    Stories and literary texts to stimulate creative thinking, interest and enthusiasm
-                  </p>
-                  <br />
-                  <p>
-                    Our trained facilitators will model language skills and behavior to encourage children
-                    to be immersed in a language rich environment while they play and learn.
-                  </p>
-                  <br />
-                  <p>
-                    Learners participate in group activities and projects that allow them to effectively express themselves, articulate emotions
-                    and respond empathetically in conditions created through Drama play
-                  </p>
-                </div>
-              </Grid>
-
-              <Grid item xs={12} sm={12} md={3}>
-                <div
-                  style={{
-                    backgroundImage: `url('https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')`,
-                    width: '100%',
-                    height: '80vh',
-                    backgroundSize: 'cover',
-                    backgroundPositionX: 'center'
-                  }}
-                >
-                </div>
-              </Grid>
+            <Grid item xs={12} sm={12} md={6} >
+              <p className="page-description">The Sesquipedalian language arts and
+              personality development curriculum is
+              a first of its kind based on a combination
+              of techniques outlined in the EL Education
+              Framework and Character First Education
+              Leadership Programme.
+              At Sesquipedalian, we guide our students to
+              achieve three theatre-led pillars of high
+              performance
+                </p>
             </Grid>
-          </div>
+          </Grid>
 
-          <div  id="propel" className="program-wrap mt-2 pt-5" >
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-              spacing={4}
-            >
-              <Grid item xs={12} sm={12} md={3}>
-                <div
-                  style={{
-                    backgroundImage: `url('https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')`,
-                    width: '100%',
-                    height: '80vh',
-                    backgroundSize: 'cover',
-                    backgroundPositionX: 'center'
-                  }}
-                >
-                </div>
-              </Grid>
-              <Grid item xs={12} sm={12} md={9}>
-                <div className="program-info">
-                  <h3 className="has-text-weight-semibold is-size-3 is-size-5-mobile is-size-3-tablet is-size-3-widescreen">
-                    Propel (For ages 11-13)
-                  </h3>
-                  <p>
-                    At this stage, Students will develop word awareness, learn morphological
-                    elements that are most frequent and Independent word learning strategies
-                    through a wide genre of age appropriate literary content. Additionally
-                    students will develop the ability to use context to determine meanings of
-                    unknown words  through carefully structured assignments and Collaborated
-                    Learning activities
-                  </p>
-                  <br />
-
-                  <p>
-                    Lessons will consist of performance-led activities drawing awareness
-                    to emotion, mood and the ability to  communicate this understanding
-                    through the use of vocal techniques including  breath control,
-                    pause, emphasis, changes of tone, pace, pitch and volume.
-                  </p>
-
-                  <br />
-                  <p>
-                    Students will be guided to develop communication skills through
-                    the delivery of effective presentations on social, cultural or environmental
-                    issues that demonstrate background research, analysis and debate while integrating
-                    presentation skills with clear, relevant visual aids.
-                  </p>
-                  <br />
-
-                  <p>
-                    Drama led activities including hot seating, devised drama, role play
-                    improvisation and SEL strategies (social and emotional learning) will
-                    present learners with nine essential leadership skills to build
-                    character and competence needed for success.
-                  </p>
-                </div>
-
-              </Grid>
+          {/* Section 2 */}
+          <Grid container
+            direction="row"
+            className="mt-3"
+          >
+            <Grid item xs={12} sm={12} md={4} >
+              <h1 className="section-title">Interpretation</h1>
             </Grid>
-          </div>
-
-          <div id="ascend" className="program-wrap mt-2 pt-5">
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-              spacing={4}
-            >
-              <Grid item xs={12} sm={12} md={9}>
-                <div className="program-info">
-                  <h3 className="has-text-weight-semibold is-size-3 is-size-5-mobile is-size-3-tablet is-size-3-widescreen">
-                    Ascend (For ages 14 and above)
-                  </h3>
-                  <p>
-                    At the end of this course students will use multisyllabic words or
-                    phrase choices based on a highly developed vocabulary and a thorough
-                    understanding of challenging contexts. Performance led activities will
-                    enable students to acquire the skill to communicate the meaning of a
-                    given text with relevant and appropriate use of vocal and physical
-                    techniques to engage an audience fully.
-                  </p>
-                  <br />
-
-                  <p>
-                    Students who progress to the ‘Ascend’ stage  will demonstrate the
-                    ability to engage spontaneously and take some responsibility for
-                    discussion, including appropriate justification of opinions and
-                    showing some perceptiveness and active listening skills through
-                    debate, role play and real-play.
-                  </p>
-                  <br />
-
-                  <p>
-                    Learners will develop the ability to deliver a talk on an unseen
-                    topic while demonstrating knowledge of the subject matter and
-                    engaging interactively with the audience through verbal and
-                    non-verbal communication.
-                  </p>
-                  <br />
-
-                  <p>
-                    The program directs students to develop a creative response to
-                    challenges in authentic situations, identify individual personality
-                    traits and develop emotional intelligence through the exploration of skits,
-                    improvisation and relevant theatre techniques.
-                  </p>
-
-
-                </div>
-              </Grid>
-
-              <Grid item xs={12} sm={12} md={3}>
-                <div
-                  style={{
-                    backgroundImage: `url('https://images.pexels.com/photos/4834822/pexels-photo-4834822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')`,
-                    width: '100%',
-                    height: '80vh',
-                    backgroundSize: 'cover',
-                    backgroundPositionX: 'center'
-                  }}
-                >
-                </div>
-              </Grid>
+            <Grid item xs={12} sm={12} md={8} >
+              <p className="page-description">To develop an analytical mind, advancing from comprehension of
+              concepts to complex reasoning. To communicate clearly and eloquently,
+              with a proficiency in language that enriches every aspect of their
+                </p>
             </Grid>
-          </div>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            className="mt-2"
+          >
+            <Grid item xs={12} sm={12} md={4} >
+              <h1 className="section-title">Improvisation</h1>
+            </Grid>
+            <Grid item xs={12} sm={12} md={8} >
+              <p className="page-description">To be agile and creative, learning to reinvent themselves to work under
+              pressure, try new ideas, learn independently and adapt to constantly
+              changing situations.
+              </p>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            className="mt-2"
+          >
+            <Grid item xs={12} sm={12} md={4} >
+              <h1 className="section-title">Character</h1>
+            </Grid>
+            <Grid item xs={12} sm={12} md={8} >
+              <p className="page-description">
+                To develop self-image, self-discipline and self-confidence, taking part in
+                collaborative efforts with empathy, integrity and compassion.
+              </p>
+            </Grid>
+          </Grid>
+
+          {/* Section 3 */}
+          <Grid container
+            direction="row"
+            justify="center"
+            className="mt-3"
+
+          >
+            <Grid item xs={12} sm={12} md={4} >
+              <h1 className="main-title mt-4 mr-2 text-right">Play by</h1>
+            </Grid>
+            <Grid item xs={12} sm={12} md={8} >
+              <h1 className="main-title">Play</h1>
+              <button variant="contained" color="primary" className="btn btn-primary float-right btm-sm-full-width"
+                onClick={this.handleClickOpen}
+              >
+                Check Weekly Shedule
+              </button>
+              <h2 className="main-sub-title">Progressive development</h2>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            spacing={3}
+          >
+            <Grid item xs={12} sm={12} md={4} >
+            </Grid>
+            <Grid item xs={12} sm={12} md={8} >
+              <p className="page-description">
+                From the age of 5 and above, students can progress through the program
+                at their own pace, with interactive lessons, engaging academic content
+                and live performances at every stage.
+
+                </p>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            spacing={3}
+          >
+            <Grid item xs={12} sm={12} md={9} >
+            </Grid>
+            <Grid item xs={12} sm={12} md={3} >
+              <div className="program-tile bg-secondary">
+                <h1>Ascend</h1>
+                <p>For ages 14 and above</p>
+              </div>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            spacing={3}
+          >
+            <Grid item xs={12} sm={12} md={6} >
+            </Grid>
+            <Grid item xs={12} sm={12} md={3} >
+              <div className="program-tile bg-primary">
+                <h1>Propel</h1>
+                <p>For ages 11-13</p>
+              </div>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            spacing={3}
+          >
+            <Grid item xs={12} sm={12} md={3} >
+            </Grid>
+            <Grid item xs={12} sm={12} md={3} >
+              <div className="program-tile bg-accent">
+                <h1>Ignite</h1>
+                <p>For ages 8-10</p>
+              </div>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            spacing={3}
+          >
+            <Grid item xs={12} sm={12} md={3} >
+              <div className="program-tile bg-accent-light">
+                <h1>Launch</h1>
+                <p>For ages 5-7</p>
+              </div>
+            </Grid>
+          </Grid>
+
+
+          {/* Section 4 */}
+          <Grid container
+            direction="row"
+            spacing={3}
+            className="mt-3 p-2 bg-accent-light"
+          >
+            <Grid item xs={12} sm={12} md={3} >
+              <h1 className="section-title">Launch</h1>
+              <h2 className="section-sub-title">For ages 5-7</h2>
+            </Grid>
+            <Grid item xs={12} sm={12} md={9} >
+              <p className="page-description-lg">
+                An exploration-based approach to learning to get started with theatre-led learning, guided by trained facilitators and timeless drama techniques.
+                </p>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} >
+              <img src={launch} className="program-tile-img" />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} className="flex flex-column justify-around" >
+              <p className="page-description">
+                - Thematic content, stories and literary texts to stimulate creative thinking and character development.
+                </p>
+              <p className="page-description">
+                - Modelling language skills in an immersive environment through drama play
+                </p>
+              <p className="page-description">
+                - Group activities and projects to encourage self-expression
+                </p>
+              <p className="page-description">
+                - Simulated drama situation to articulate emotions and respond empathetically
+                </p>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            spacing={3}
+            className="mt-3 p-2 bg-accent text-white"
+          >
+            <Grid item xs={12} sm={12} md={3} >
+              <h1 className="section-title text-white">Ignite</h1>
+              <h2 className="section-sub-title">For ages 8-10</h2>
+            </Grid>
+            <Grid item xs={12} sm={12} md={9} >
+              <p className="page-description-lg">
+                An expansion of literary and speech proficiency with real-world applications of theatre techniques such as vocalization and visual communication.
+                </p>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} >
+              <img src={ignite} className="program-tile-img" />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} className="flex flex-column justify-around" >
+              <p className="page-description-sm">
+                - Literature from different genres to stimulate vocabulary development, comprehension skills and critical thinking.
+                </p>
+              <p className="page-description">
+                - Foundation speech communication skills such as public speaking practice
+                </p>
+              <p className="page-description">
+                - Research skills and visual aid development for presentations
+                </p>
+              <p className="page-description">
+                - Reading practices to engage with voice, speech and eye contact
+                </p>
+              <p className="page-description">
+                - Theatre-led activities such as ensemble building games and script work
+                </p>
+              <p className="page-description">
+                - Improvisation aimed at building collaboration, creativity and problem-solving strategies
+                </p>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            spacing={3}
+            className="mt-3 p-2 bg-primary text-white"
+          >
+            <Grid item xs={12} sm={12} md={3} >
+              <h1 className="section-title text-white">Propel</h1>
+              <h2 className="section-sub-title">For ages 11-13</h2>
+            </Grid>
+            <Grid item xs={12} sm={12} md={9} >
+              <p className="page-description-lg">
+                An exploration-based approach to learning to get started with theatre-led learning, guided by trained facilitators and timeless drama techniques.
+                </p>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} >
+              <img src={propel} className="program-tile-img" />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} className="flex flex-column justify-around" >
+              <p className="page-description">
+                - Thematic content, stories and literary texts to stimulate creative thinking and character development.
+                </p>
+              <p className="page-description">
+                - Modelling language skills in an immersive environment through drama play
+                </p>
+              <p className="page-description">
+                - Group activities and projects to encourage self-expression
+                </p>
+              <p className="page-description">
+                - Simulated drama situation to articulate emotions and respond empathetically
+                </p>
+            </Grid>
+          </Grid>
+
+          <Grid container
+            direction="row"
+            spacing={3}
+            className="mt-3 p-2 bg-secondary text-white"
+          >
+            <Grid item xs={12} sm={12} md={3} >
+              <h1 className="section-title text-white">Ascend</h1>
+              <h2 className="section-sub-title">For ages 14 and above</h2>
+            </Grid>
+            <Grid item xs={12} sm={12} md={9} >
+              <p className="page-description-lg">
+                An advanced understanding of communication, interpersonal skills, logical reasoning and creative problem-solving.
+                </p>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} >
+              <img src={ascend} className="program-tile-img" />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} className="flex flex-column justify-around" >
+              <p className="page-description">
+                - Use of multisyllabic words and phrase choices based on a highly developed vocabulary.
+                </p>
+              <p className="page-description">
+                - Understanding of challenging contexts
+                </p>
+              <p className="page-description">
+                - Performance-led activities to communicate texts with vocal and physical techniques to keep audiences engaged
+                </p>
+              <p className="page-description">
+                - Demonstrate the ability to engage and take responsibility for discussions
+                </p>
+                <p className="page-description">
+                - Develop perceptiveness, active listening skills and justification of opinions through debate, role-play and real-play
+                </p>
+                <p className="page-description">
+                - Develop emotional intelligence through the exploration of skits, improvisation and relevant theatre techniques
+                </p>
+            </Grid>
+          </Grid>
 
         </section>
 
@@ -347,38 +411,38 @@ export default class ProgramIndexPage extends React.Component {
                     </TableRow>
                   </TableHead>
                   <TableBody className="bg-accent-light">
-                      <TableRow>
-                        <TableCell >9.00-10.00 am</TableCell>
-                        <TableCell >Ignite</TableCell>
-                        <TableCell >-</TableCell>
-                        <TableCell >-</TableCell>
-                        <TableCell >-</TableCell>
-                        <TableCell >-</TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell >3.00-4.00 pm</TableCell>
-                        <TableCell >-</TableCell>
-                        <TableCell >Launch</TableCell>
-                        <TableCell >Launch</TableCell>
-                        <TableCell >Launch</TableCell>
-                        <TableCell >Ignite </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell >4.00-5.00 pm</TableCell>
-                        <TableCell >Propel</TableCell>
-                        <TableCell >Ignite</TableCell>
-                        <TableCell >Ascend</TableCell>
-                        <TableCell >Propel</TableCell>
-                        <TableCell >Propel</TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell >5.00-6.00 pm</TableCell>
-                        <TableCell >Ascend</TableCell>
-                        <TableCell >-</TableCell>
-                        <TableCell >-</TableCell>
-                        <TableCell >-</TableCell>
-                        <TableCell >-</TableCell>
-                      </TableRow>
+                    <TableRow>
+                      <TableCell >9.00-10.00 am</TableCell>
+                      <TableCell >Ignite</TableCell>
+                      <TableCell >-</TableCell>
+                      <TableCell >-</TableCell>
+                      <TableCell >-</TableCell>
+                      <TableCell >-</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell >3.00-4.00 pm</TableCell>
+                      <TableCell >-</TableCell>
+                      <TableCell >Launch</TableCell>
+                      <TableCell >Launch</TableCell>
+                      <TableCell >Launch</TableCell>
+                      <TableCell >Ignite </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell >4.00-5.00 pm</TableCell>
+                      <TableCell >Propel</TableCell>
+                      <TableCell >Ignite</TableCell>
+                      <TableCell >Ascend</TableCell>
+                      <TableCell >Propel</TableCell>
+                      <TableCell >Propel</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell >5.00-6.00 pm</TableCell>
+                      <TableCell >Ascend</TableCell>
+                      <TableCell >-</TableCell>
+                      <TableCell >-</TableCell>
+                      <TableCell >-</TableCell>
+                      <TableCell >-</TableCell>
+                    </TableRow>
                   </TableBody>
                 </Table>
               </TableContainer>
@@ -387,9 +451,9 @@ export default class ProgramIndexPage extends React.Component {
           </DialogContent>
           <DialogActions>
             <button className="btn"
-                onClick={this.handleClose}
-              >
-                Ok
+              onClick={this.handleClose}
+            >
+              Ok
             </button>
           </DialogActions>
         </Dialog>
