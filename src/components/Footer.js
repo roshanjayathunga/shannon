@@ -62,7 +62,7 @@ const Footer = class extends React.Component {
             </ul>
           </Grid>
     
-          <Grid item xs={12} md={4} >
+          <Grid item xs={12} md={3} >
           <div className="footer-social">
               <a title="facebook" href="https://facebook.com" className="social-icon">
                 <i className="fab fa-facebook-f"></i>
@@ -76,23 +76,20 @@ const Footer = class extends React.Component {
             </div>
           </Grid>
 
-          <Grid item xs={12} md={4} >
-          
-              <div>
-                <div class="footer-address">
-                <p>We currently conduct our classes at</p>
-                  <b><span>The Sooriya Village,</span></b> <br/>
-                  <b><span>49 Skelton Rd,  </span></b> <br/>
-                  <b><span>Colombo 5.</span></b> 
-                </div>
-              </div>
-
-              <br/>
-
+          <Grid item xs={12} md={5} >
               <div class="footer-address">
                 <p>Contact Us On</p>
-                <b><span>0777 768 769</span></b>
+                <p className="page-description-lg">0777 768 769</p>
               </div>
+                <br />
+                <div class="footer-address">
+                <p>We currently conduct our classes at</p>
+                  <p className="page-description-lg">The Sooriya Village,</p>
+                  <p className="page-description-lg"> 49 Skelton Rd,</p>
+                  <p className="page-description-lg">Colombo 5.</p>
+                </div>
+
+
           </Grid>
 
         </Grid>

@@ -42,6 +42,10 @@ body{
 .content-area{
     padding: 3rem 5rem;
 }
+.mt-0{
+    margin-top: 0rem !important;
+}
+   
 .mt-1{
     margin-top: 1rem !important;
 }
@@ -60,6 +64,10 @@ body{
 
 .mt--1{
     margin-top: -1rem;
+}
+
+.mt--2{
+    margin-top: -2rem;
 }
 
 .ml-2{
@@ -113,7 +121,7 @@ body{
 
 .page-description-lg{
     font-size: 24px;
-    line-height: 40px;
+    line-height: 36px;
 }
 
 .section-title{
@@ -549,7 +557,28 @@ button:focus{
     min-height: 100vh;
 }
 .contact-wrap{
-    padding: 4rem 3rem;
+    padding: 1rem 3rem;
+    position: absolute;
+    top:10vh;
+    height: 80vH;
+    background-color: #ffbc07ed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.contact-wrap .MuiInputLabel-formControl{
+    font-weight: 600;
+}
+
+.contact-wrap .MuiInputBase-input{
+    font-weight: 600;
+}
+
+.contact-cover-img{
+    height: 100vH;
+    width: 100%;
+    object-fit: cover;
 }
 
 // Insta Feed 
@@ -651,6 +680,15 @@ button:focus{
 
     .section-about{
         padding-top: 3rem;
+    }
+    .section-contact .contact-cover-img{
+       height: 120vH;
+       margin-bottom: -10px;
+    }
+
+    .contact-wrap{
+        padding: 2em 1rem;
+        height: auto;
     }
 
     .footer-title{

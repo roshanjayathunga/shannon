@@ -3,6 +3,7 @@ import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 import { Button, Grid, TextField } from '@material-ui/core'
 import MenuItem from '@material-ui/core/MenuItem';
+import contact from '../../img/contact.jpg'
 import location from '../../img/map.png'
 
 function encode(data) {
@@ -66,23 +67,23 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <section className="section-contact">
+
+          <Grid container
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+             <Grid item xs={0} sm={0} md={12} >
+              <img src={contact} className="contact-cover-img" />
+             </Grid>
+          </Grid>
+
           <Grid container
             direction="row"
             justify="center"
             alignItems="center"
           >
             <Grid item xs={0} sm={0} md={5} >
-              {/* <img src="https://images.pexels.com/photos/5063095/pexels-photo-5063095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" /> */}
-              <div
-                style={{
-                  backgroundImage: `url(${location})`,
-                  backgroundRepeat: 'no-repeat',
-                  height: '100vh',
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover'
-                }}
-              ></div>
-
             </Grid>
             <Grid item xs={12} sm={12} md={7} >
               <div className="contact-wrap">
@@ -100,13 +101,13 @@ export default class Index extends React.Component {
                       <TextField
                         id="standard-select-currency"
                         select
-                        variant="outlined"
                         margin="normal"
                         fullWidth
                         required
                         value={this.state.currency}
                         onChange={this.handleChange}
                         label="Please select option"
+                        
                       >
                         {currencies.map((option) => (
                           <MenuItem key={option.value} value={option.value}>
@@ -120,13 +121,13 @@ export default class Index extends React.Component {
                       <TextField
                         id="standard-select-currency"
                         select
-                        variant="outlined"
                         margin="normal"
                         fullWidth
                         required
                         value={this.state.currency}
                         onChange={this.handleChange}
                         label="Title"
+                        className="mt--1"
                       >
                         {currencies.map((option) => (
                           <MenuItem key={option.value} value={option.value}>
@@ -138,33 +139,30 @@ export default class Index extends React.Component {
                     <Grid item xs={12} sm={12} md={9} >
 
                       <TextField
-                        variant="outlined"
                         margin="normal"
                         required
                         fullWidth
                         id="name"
                         label="Name"
                         name="name"
-                        autoFocus
+                        className="mt--1"
                       />
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={6} >
                       <TextField
-                        variant="outlined"
                         margin="normal"
                         required
                         fullWidth
                         id="name"
                         label="Mobile No"
                         name="mobile"
-                        autoFocus
+                        className="mt--1"
                       />
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={6} >
                       <TextField
-                        variant="outlined"
                         margin="normal"
                         required
                         fullWidth
@@ -179,12 +177,12 @@ export default class Index extends React.Component {
                         inputProps={{
                           step: 300, // 5 min
                         }}
+                        className="mt--1"
                       />
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={9} >
                       <TextField
-                        variant="outlined"
                         margin="normal"
                         required
                         fullWidth
@@ -192,6 +190,7 @@ export default class Index extends React.Component {
                         label="Name of Child"
                         name="studentName"
                         autoComplete="email"
+                        className="mt--1"
                       />
                     </Grid>
 
@@ -199,13 +198,13 @@ export default class Index extends React.Component {
                       <TextField
                         id="standard-select-currency"
                         select
-                        variant="outlined"
                         margin="normal"
                         fullWidth
                         required
                         value={this.state.currency}
                         onChange={this.handleChange}
                         label="Age Group"
+                        className="mt--1"
                       >
                         {currencies.map((option) => (
                           <MenuItem key={option.value} value={option.value}>
@@ -218,10 +217,10 @@ export default class Index extends React.Component {
                   </Grid>
 
                   <Grid item xs={12} sm={12} md={12} >
-                    <br />  
-                    <button variant="contained" color="primary" className="btn btn-primary btn-fullwidth">
-                    Submit
-                  </button> 
+                    <br />
+                    <button variant="contained" color="primary" className="btn btn-accent btn-fullwidth">
+                      Submit
+                  </button>
                   </Grid>
 
 
