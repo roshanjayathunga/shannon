@@ -42,7 +42,9 @@ body{
 .content-area{
     padding: 3rem 5rem;
 }
-
+.mt-1{
+    margin-top: 1rem !important;
+}
 .mt-2{
     margin-top: 2rem !important;
 }
@@ -77,11 +79,12 @@ body{
 .p-0{
     padding: 0 !important;
 }
-
 .p-2{
     padding: 2rem !important;
 }
-
+.p-3{
+    padding: 3rem !important;
+}
 .pt-5{
     padding-top: 5rem;
 }
@@ -511,6 +514,25 @@ button:focus{
 
 .gallery-img:hover{
     cursor: pointer;
+}
+
+// On Stage and Beyond Page
+.section-onstage{
+    padding: 3rem 5rem;
+}
+
+.onstage-card{
+    padding: 3rem;
+    color: $white;
+}
+
+.onstage-card h1{
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.onstage-card p{
+    font-size: 21px;
 }
 
 // FAQ page
