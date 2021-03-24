@@ -75,8 +75,9 @@ export default function Navbar() {
       else {
         setColorchange(false);
       }
+      window.addEventListener('scroll', changeNavbarColor);
     };
-    window.addEventListener('scroll', changeNavbarColor);
+    
   }
 
   let app = useRef(null);
