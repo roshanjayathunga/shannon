@@ -55,7 +55,7 @@ const useStyles = makeStyles({
     paddingTop: '4px !important',
     paddingBottom: '4px !important',
   },
-  listItemSub:{
+  listItemSub: {
     fontSize: '14px !important',
   }
 });
@@ -67,23 +67,24 @@ export default function Navbar() {
   });
 
   const [colorChange, setColorchange] = React.useState(false);
-  const changeNavbarColor = () =>{
-     if(window.scrollY >= 80){
-       setColorchange(true);
-     }
-     else{
-       setColorchange(false);
-     }
-  };
-  window.addEventListener('scroll', changeNavbarColor);
-
+  const changeNavbarColor = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY >= 80) {
+        setColorchange(true);
+      }
+      else {
+        setColorchange(false);
+      }
+    };
+    window.addEventListener('scroll', changeNavbarColor);
+  }
 
   let app = useRef(null);
   let tl = new TimelineLite();
 
   let navMenu = [{ title: 'Home', path: '/' }, { title: 'About Us', path: '/about' }, { title: 'Curriculum', path: '/program' }, { title: 'On stage and Beyond', path: '/onstagebeyond' }, { title: 'Gallery', path: '/gallery' }, { title: 'FAQ', path: '/faq' }, { title: 'Contact Us', path: '/contact' }]
   let navMenuSub = []
-  let path= '';
+  let path = '';
 
   if (typeof window !== "undefined") {
     path = window.location.pathname;
@@ -135,18 +136,18 @@ export default function Navbar() {
                   <ListItemText primary={item.title} />
                 </ListItem>
                 <div>
-                {item.path == path ? (
-                      navMenuSub.map((subItem, subIndex) => {
-                        return (
-                          <Link to={item.path + subItem.path }>
-                            <ListItem button className="nav-item-sub">
-                                <ListItemText className="nav-item-sub-text" primary={subItem.title} />
-                            </ListItem>
-                          </Link>
-                        )
-                      })
-                  ) :(null)}
-              </div>
+                  {item.path == path ? (
+                    navMenuSub.map((subItem, subIndex) => {
+                      return (
+                        <Link to={item.path + subItem.path}>
+                          <ListItem button className="nav-item-sub">
+                            <ListItemText className="nav-item-sub-text" primary={subItem.title} />
+                          </ListItem>
+                        </Link>
+                      )
+                    })
+                  ) : (null)}
+                </div>
               </Link>
 
             </Slide>

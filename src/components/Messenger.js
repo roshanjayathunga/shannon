@@ -2,14 +2,17 @@ import React from "react";
 
 class Messenger extends React.Component {
   componentDidMount() {
-    window.fbAsyncInit = function() {
-      FB.init({ //eslint-disable-line
-        appId: 240407464397716,
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: 'v9.0'
-      });
-    };
+    if (typeof window !== "undefined"){
+          window.fbAsyncInit = function() {
+            FB.init({ //eslint-disable-line
+            appId: 240407464397716,
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v9.0'
+        });
+      };
+    }
+
 
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
