@@ -11,6 +11,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Slide from '@material-ui/core/Slide';
 import { Location } from '@reach/router';
 
+import logo from '../img/logo.png'
+
 import { TweenMax, TimelineLite, Power3, Expo } from "gsap";
 import { Link } from 'gatsby';
 
@@ -63,6 +65,18 @@ export default function Navbar() {
   const [menu, setState] = React.useState({
     left: false,
   });
+
+  const [colorChange, setColorchange] = React.useState(false);
+  const changeNavbarColor = () =>{
+     if(window.scrollY >= 80){
+       setColorchange(true);
+     }
+     else{
+       setColorchange(false);
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
+
 
   let app = useRef(null);
   let tl = new TimelineLite();
@@ -186,8 +200,8 @@ export default function Navbar() {
           </Drawer>
         </React.Fragment>
       ))}
-      <div className="navbar" >
-        <Link to="/"><span className="logo">Sesquipedalian</span></Link>
+      <div className={colorChange ? 'navbar nav-color-change' : 'navbar'} >
+        <Link to="/"><span className="logo"><img src={logo} /></span></Link>
         <button onClick={toggleDrawer("left", true)} className={classes.menuBtn}>
           <i className={`fas fa-bars ${classes.menuIcon}`}></i>
         </button>

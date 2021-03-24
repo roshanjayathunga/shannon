@@ -100,7 +100,7 @@ body{
 .main-title{
     font-size: 64px;
     font-weight: 600;
-    color: $secondaryColor;
+    color: $textColor;
 }
 
 .main-sub-title{
@@ -251,6 +251,7 @@ button:focus{
     font-size: 100px;
     letter-spacing: 5px;
     color: $textColor;
+    text-transform: uppercase;
 }
 
 .overlay {
@@ -288,6 +289,40 @@ button:focus{
     visibility: hidden;
     display: inline-block;
 }
+.logo {
+    font-size: 21px;
+    font-weight: 600;
+    color: $primaryColor;
+    margin: 14px 10px;
+    position: absolute;
+}
+
+.logo img{
+    width: 250px;
+    height: auto;
+}
+
+.nav-color-change{
+    background-color: $accentColor;
+    transition: background-color 1000ms linear;   
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+}
+
+.nav-color-change .logo img{
+    width: 220px;
+    transition: width 1000ms linear;   
+    -webkit-transition: width 1000ms linear;
+    -ms-transition: width 1000ms linear;
+}
+
+.nav-color-change i{
+    color: #9ad7d6 !important;
+    transition: color 1000ms linear;   
+    -webkit-transition: color 1000ms linear;
+    -ms-transition: color 1000ms linear;
+}
+
 
 .makeStyles-navbar-1{
     visibility: hidden;
@@ -335,6 +370,7 @@ button:focus{
     color: $white;
     font-weight: 600;
     letter-spacing: 8px;
+    text-transform: uppercase;
 }
 
 .hero-subtitle{ 
@@ -342,14 +378,6 @@ button:focus{
     font-weight: 200;
     letter-spacing: 8px;
     margin-bottom: 1.2rem;
-}
-
-.logo {
-    font-size: 21px;
-    font-weight: 600;
-    color: $primaryColor;
-    margin: 14px 10px;
-    position: absolute;
 }
 
 .MuiButton-text {
@@ -454,6 +482,11 @@ button:focus{
 
 .about-img{
     height: 300px;
+    width: fit-content;
+    object-fit: cover;
+}
+.about-img-main{
+    height: 450px;
     width: fit-content;
     object-fit: cover;
 }
@@ -642,6 +675,9 @@ button:focus{
 
 @media screen and (max-width: 540px) {
     // Common Style
+    body{
+        overflow-x: hidden !important;
+    }
     .btm-sm-full-width{
         width: 100%;
     }
@@ -650,21 +686,35 @@ button:focus{
         padding: 1rem;
     }
 
+    .main-title{
+        font-size: 32px;
+    }
+
+    /*Navbar*/
+    .logo img{
+        width: 220px;
+        height: auto;
+        margin-top: -8px;
+    }
+    
     /* Styles go here */
     .loading-title{
         font-size: 36px;
         letter-spacing: 2px;
         color: $textColor;
+        font-weight: 600;
+        margin-top: -50px;
       }
 
     .hero-title{
         padding: 1rem;
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 600;
         letter-spacing: 3px;
     }
     
     .hero-subtitle{ 
+        font-size: 26px;
         font-weight: 200;
         letter-spacing: 5px;
     }
@@ -684,6 +734,23 @@ button:focus{
     .section-contact .contact-cover-img{
        height: 120vH;
        margin-bottom: -10px;
+    }
+
+    .testimonial-wrap{
+        padding: 2em 1rem;
+    }
+
+    .testnomial-title{
+        height: 0;
+        background-color: transparent;
+        padding: 0;
+        justify-content:left;
+        color: $textColor !important;
+    }
+
+    .testinomials-students{
+        flex-direction: column-reverse !important;
+        justify-content: left;
     }
 
     .contact-wrap{

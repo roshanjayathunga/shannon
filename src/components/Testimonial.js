@@ -78,6 +78,7 @@ export default class Testimonial extends React.Component {
           justify="center"
           alignItems="center"
           spacing={4}
+          className="testinomials-students"
         >
           <Grid item xs={12} sm={12} md={9}>
             <div>
@@ -96,7 +97,7 @@ export default class Testimonial extends React.Component {
                 </div>
 
                 <div className="testimonials-item">
-                  <p className="description">" I’ve developed my interpersonal skills- Kavindrra Samarasekera "
+                  <p className="description">" I’ve developed my interpersonal skills "
                     </p>
                   <p className="author-name">Kavindrra Samarasekera, <span className="author-info">12</span></p>
                 </div>

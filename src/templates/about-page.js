@@ -118,7 +118,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             <img src={team1} className="about-img about-img-portrait"/>
         </Grid>
         <Grid item xs={12} sm={12} md={8} >
-          <p className="page-description mt-2"><b><i>Amanda Paiva</i></b> has always been passionate about      
+          <p className="page-description mt-2"><b><i>Amanda Paiva </i></b> has always been passionate about      
 				theatre as a tool to enable young learners to express 
 				themselves creatively and effectively.
 				Over the course of her prolific career, she’s earned
@@ -126,7 +126,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
  				Certification from Trinity College London, a diploma
           in  Education and Certification in ESL training.
  						She has taught at Colombo International School since 
- 					2009 and founded the Spotlight Young Actors Studio
+ 					2009 and founded Spotlight Young Actors’ Studio
    					in 2012.</p>
           <p className="page-description mt-2">Following this success, Amanda launched 
 					           Sesquipedalian, a holistic, theatre-led academic 
@@ -143,8 +143,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       >
 
         <Grid item xs={12} sm={12} md={8} >
-          <p className="page-description mt-2 text-right"><b><i>Wendy Devaraj</i></b>is an educator and artist whose work focuses on instructing young learners during early childhood. She holds a professional diploma in advanced teaching and the Cambridge TKT certification. With teaching experience of over 5 years, Wendy believes in providing holistic learning experiences that tap 
-          into students’ passion so they can form deeper connections with the curriculum. </p>
+          <p className="page-description mt-2 text-right"><b><i>Wendy Devaraj </i></b>is an educator and artist whose work 
+          focuses on instructing young learners during early childhood. She holds a professional diploma in advanced teaching and the Cambridge TKT certification. 
+          With teaching experience of over 5 years, Wendy believes in providing a learning experience that taps into students' passion so they can form deeper connections with the curriculum.</p>
         </Grid>
         <Grid item xs={12} sm={12} md={4} >
             <img src={team2} className="about-img about-img-portrait"/>
@@ -158,9 +159,10 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         spacing={3}
       >
 
-        <Grid item xs={12} sm={12} md={8} >
-          <p className="page-description mt-2 "><b><i>Hillarine Fernando</i></b>holds a Licentiate Diploma in Speech and Drama (LTCL Teaching) She is a member and an examiner for examinations conducted in 
+        <Grid item xs={12} sm={12} md={12} >
+          <p className="page-description mt-2 "><b><i>Hillarine Fernando </i></b>holds a Licentiate Diploma in Speech and Drama (LTCL Teaching) She is a member and an examiner for examinations conducted in 
           Colombo for STSD (The Society of Teachers of Speech and Drama UK). In addition to her extensive theatre teaching experience she currently lectures for Early Childhood Education studies.
+          She believes creativity, fun and positivity keeps students enthusiastic towards learning.  
         </p>
         </Grid>
         <Grid item xs={12} sm={12} md={4} >

@@ -98,7 +98,7 @@ export const IndexPageTemplate = ({
         </Grid>
         <Grid item xs={12} sm={12} md={9} >
           <p className="page-description">Sesquipedalian Theatre-led Learning is a contemporary academic curriculum that brings the principles of the performing arts to a comprehensive language and personality development programme for children between the ages of 5 and 16.</p>
-          <p className="page-description">With tools and techniques from the stage to enhance the experience, students can develop their academic, leadership, cognitive and social skills and reach their potential as high performers.</p>
+          <p className="page-description">With tools and techniques from the stage to enhance the experience, students can develop their academic, leadership, cognitive and social skills to reach their potential as high performers.</p>
           
           <div className="flex justify-center">
           <Link to="/program">
@@ -121,14 +121,14 @@ export const IndexPageTemplate = ({
 
       >
         <Grid item xs={12} sm={12} md={9}>
-          <h3 className="has-text-weight-semibold is-size-2 is-size-4-mobile is-size-2-tablet is-size-2-widescreen">
+          <h3 className="has-text-weight-semibold is-size-2 is-size-2-mobile is-size-2-tablet is-size-2-widescreen">
             Curriculum
             </h3>
         </Grid>
         <Grid item xs={12} sm={12} md={3}>
           <Link to="/contact">
             <button variant="contained" color="primary" className="btn btn-primary float-right btm-sm-full-width">
-              Join Demo
+             Book a Trial
             </button>
           </Link>
         </Grid>
@@ -138,6 +138,7 @@ export const IndexPageTemplate = ({
             title={"Launch"}
             subtitle={"Ages 5-7"}
             info={""}
+            link={"/program"}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={3}>
@@ -145,6 +146,7 @@ export const IndexPageTemplate = ({
             title={"Ignite"}
             subtitle={"Ages 8-10"}
             info={""}
+            link={"/program"}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={3}>
@@ -152,6 +154,7 @@ export const IndexPageTemplate = ({
             title={"Propel"}
             subtitle={"Ages 11-13"}
             info={""}
+            link={"/program"}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={3}>
@@ -159,6 +162,7 @@ export const IndexPageTemplate = ({
             title={"Ascend"}
             subtitle={"Ages 14 and above"}
             info={""}
+            link={"/program"}
           />
         </Grid>
 

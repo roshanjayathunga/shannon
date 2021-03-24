@@ -8,6 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import { Link } from 'gatsby'
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 400,
@@ -21,6 +23,7 @@ const Program = (props) => {
   const classes = useStyles();
 
   return (
+    <Link to="/program">
     <Card className={classes.root} className="program-card">
       <CardActionArea>
         <CardMedia
@@ -46,6 +49,7 @@ const Program = (props) => {
       {/* <CardActions>
       </CardActions> */}
     </Card>
+    </Link>
   );
 }
 

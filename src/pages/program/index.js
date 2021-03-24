@@ -87,10 +87,10 @@ export default class ProgramIndexPage extends React.Component {
             spacing={3}
 
           >
-            <Grid item xs={12} sm={12} md={6} >
-              <img src={cover} className="about-img" />
+            <Grid item xs={12} sm={12} md={12} >
+              <img src={cover} className="about-img-main" />
             </Grid>
-            <Grid item xs={12} sm={12} md={6} >
+            <Grid item xs={12} sm={12} md={12} >
               <p className="page-description">The Sesquipedalian language arts and
               personality development curriculum is
               a first of its kind based on a combination
