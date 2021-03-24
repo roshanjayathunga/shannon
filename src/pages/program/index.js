@@ -196,7 +196,7 @@ export default class ProgramIndexPage extends React.Component {
             <Grid item xs={12} sm={12} md={3} >
               <div className="program-tile bg-secondary">
                 <h1>Ascend</h1>
-                <p>For ages 14 and above</p>
+                <p>For ages 12 and above</p>
               </div>
             </Grid>
           </Grid>
@@ -210,7 +210,7 @@ export default class ProgramIndexPage extends React.Component {
             <Grid item xs={12} sm={12} md={3} >
               <div className="program-tile bg-primary">
                 <h1>Propel</h1>
-                <p>For ages 11-13</p>
+                <p>For ages 10-11</p>
               </div>
             </Grid>
           </Grid>
@@ -224,7 +224,7 @@ export default class ProgramIndexPage extends React.Component {
             <Grid item xs={12} sm={12} md={3} >
               <div className="program-tile bg-accent">
                 <h1>Ignite</h1>
-                <p>For ages 8-10</p>
+                <p>For ages 8-9</p>
               </div>
             </Grid>
           </Grid>
@@ -294,7 +294,7 @@ export default class ProgramIndexPage extends React.Component {
               <img src={ignite} className="program-tile-img" />
             </Grid>
             <Grid item xs={12} sm={12} md={12} className="flex flex-column justify-around" >
-              <p className="page-description-sm">
+              <p className="page-description">
                 - Literature from different genres to stimulate vocabulary development, comprehension skills and critical thinking.
                 </p>
               <p className="page-description">

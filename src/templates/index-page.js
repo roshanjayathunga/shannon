@@ -128,7 +128,7 @@ export const IndexPageTemplate = ({
         <Grid item xs={12} sm={12} md={3}>
           <Link to="/contact">
             <button variant="contained" color="primary" className="btn btn-primary float-right btm-sm-full-width">
-             Book a Trial
+              Trial Lesson
             </button>
           </Link>
         </Grid>

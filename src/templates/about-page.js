@@ -34,6 +34,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       <Grid container
         direction="row"
         justify="center"
+        id="theatreLedMethodology"
   
       >
         <Grid item xs={12} sm={12} md={6} >
@@ -66,6 +67,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         direction="row"
         justify="center"
         className="mt-3"
+        id="socialLearning"
       >
 
         <Grid item xs={12} sm={12} md={6} >
@@ -97,6 +99,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         direction="row"
         justify="center"
         className="mt-3"
+        id="team"
       >
         <Grid item xs={12} sm={12} md={4} >
             <h1 className="main-title mt-4 mr-2 text-right">Setting</h1>

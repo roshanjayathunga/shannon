@@ -18,17 +18,17 @@ import { Link } from 'gatsby';
 
 const useStyles = makeStyles({
   root: {
-    paddingTop: '4px',
-    paddingBottom: '4px'
+    paddingTop: '2px',
+    paddingBottom: '2px'
   },
   menuBtn: {
     float: 'right',
     backgroundColor: 'transparent',
     border: 'none',
-    margin: '10px'
+    margin: '15px'
   },
   menuIcon: {
-    fontSize: '36px !important',
+    fontSize: '30px !important',
     color: '#fdbd11',
   },
   menuClose: {
@@ -52,8 +52,8 @@ const useStyles = makeStyles({
   },
   listItem: {
     fontSize: '18px !important',
-    paddingTop: '4px !important',
-    paddingBottom: '4px !important',
+    paddingTop: '2px !important',
+    paddingBottom: '2px !important',
   },
   listItemSub: {
     fontSize: '14px !important',
@@ -92,11 +92,11 @@ export default function Navbar() {
     path = window.location.pathname;
 
     if (path == '/program') {
-      navMenuSub = [{ title: 'Launch To Ascent', path: '#launchToAscent' }, { title: 'Launch', path: '#launch' }, { title: 'Propel', path: '#propel' }, { title: 'Ascend', path: '#ascend' }]
+      navMenuSub = [{ title: 'Launch To Ascent', path: '#launchToAscent' }, { title: 'Launch', path: '#launch' }, { title: 'Ignite', path: '#ignite' }, { title: 'Propel', path: '#propel' }, { title: 'Ascend', path: '#ascend' }]
     }
 
     if (path == '/about') {
-      navMenuSub = [{ title: 'Aboutss', path: '/program#launch' }, { title: 'Ignite', path: '/#ignite' }, { title: 'Propel', path: '/#propel' }, { title: 'Ascend', path: '/#ascend' }]
+      navMenuSub = [{ title: 'Theatre-led Methodology', path: '#theatreLedMethodology' }, { title: 'Social and Emotional Learning', path: '#socialLearning' }, { title: 'The Team', path: '#team' }]
     }
   }
 
