@@ -66,18 +66,20 @@ export default function Navbar() {
     left: false,
   });
 
-  const scroller = window;
-
   const [colorChange, setColorchange] = React.useState(false);
-  const changeNavbarColor = () => {
-      if (scroller.scrollY >= 80) {
-        setColorchange(true);
-      }
-      else {
-        setColorchange(false);
-      }
-  };
-  scroller.addEventListener('scroll', changeNavbarColor);
+  if (typeof window !== "undefined") {
+    const scroller = window;
+    const changeNavbarColor = () => {
+        if (scroller.scrollY >= 80) {
+          setColorchange(true);
+        }
+        else {
+          setColorchange(false);
+        }
+    };
+    scroller.addEventListener('scroll', changeNavbarColor);
+  }
+
 
   let app = useRef(null);
   let tl = new TimelineLite();
